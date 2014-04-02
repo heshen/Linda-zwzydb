@@ -1,3 +1,4 @@
+# encoding: utf-8
 LindaZwzydb::Application.routes.draw do
   get "plant/list_plant_querying"
   get "plant/map_querying"

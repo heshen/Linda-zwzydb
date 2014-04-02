@@ -16,7 +16,7 @@ $(function(){
             '<a class="attr-item attr-sed" rel="nofollow" href="javascript:voild(0)">'+
                 '<div class="attr-item-inner clearfix">'+
                     '<span class="attr-item-text"></span><i></i>'+
-                    '<span class="qstr" style="display: none">'+"{zhuxing: \"乔木\"}"+'</span>'+
+                    '<span class="qstr" style="display: none">'+"{zhuxing: \"QiaoMu\"}"+'</span>'+
                 '</div>'+
             '</a>'+
         '</li>'

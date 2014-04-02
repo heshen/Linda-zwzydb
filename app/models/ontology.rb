@@ -35,7 +35,7 @@ class Ontology
   def onto_var1
 	  @morphology_ontology1 = {
 	    :_id => "morphology1",
-	      "乔木" => {
+	      "QiaoMu" => {
 	       "大乔木" => {
 	  		      "常绿大乔木" => "常绿大乔木",
 	            "落叶大乔木" => "落叶大乔木"
@@ -55,7 +55,7 @@ class Ontology
 	  @onto1.save
 	  #p @onto2.arbor
 	  @onto1
-	  @morphology_ontology1["乔木"]
+	  @morphology_ontology1["QiaoMu"]
   end
 
 end
