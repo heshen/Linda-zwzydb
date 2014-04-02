@@ -10,7 +10,7 @@
 $(function(){
     //--- Controller1 ----------------------------------------------
     //click()
-    var new_node = $(
+    var selected_node_template = $(
         '<li class="mt-7">' +
             '<a class="attr-item attr-sed" rel="nofollow" href="javascript:voild(0)">'+
                 '<div class="attr-item-inner clearfix">'+
@@ -45,7 +45,7 @@ $(function(){
                 var strQstr =  $(this).find('span.qstr').text();     //隐藏着查询指令片段
                 var strCategory = 'select'+i;
 
-                var my_new_node = new_node.clone();
+                var my_new_node = selected_node_template.clone();
                 my_new_node.find('span.attr-item-text').text(strLabel);
                 my_new_node.find('span.qstr').attr('category',strCategory).text(strQstr);
 
@@ -78,7 +78,7 @@ $(function(){
                 var strQstr =  $(this).find('span.qstr').text();     //隐藏着查询指令hash片段
                 var strCategory = 'select2'+j;
 
-                var my_new_node = new_node.clone();
+                var my_new_node = selected_node_template.clone();
                 my_new_node.find('span.attr-item-text').text(strLabel);
                 my_new_node.find('span.qstr').attr('category',strCategory).text(strQstr);
 
@@ -109,6 +109,15 @@ $(function(){
      });
 
     //--- Controller3 ----------------------------------------------
+    //调入pic模板
+     $.getScript("multiselect/nodes_define.js")
+         .done(function(data){
+//             alert("script loaded!");
+         })
+         .fail(function(data){
+             alert("Cannot load the script (multiselect/nodes_define.js) :( ");
+         });
+
     //click()
      $('#btn_query').click(function(){
          var ajax_params = collect_query_params();
@@ -117,8 +126,9 @@ $(function(){
              data: ajax_params
              })
              .done(function(data){
-                 alert("done!  "+data);
-                 alert(data.data_s[0].cname);
+//               alert(data.data_s[0].cname);
+                 $('#cpc li').remove();
+                 populate_pic_node(data);
              })
              .fail(function(){
                  alert("本次查询失败 :(");
@@ -127,6 +137,33 @@ $(function(){
 //                 alert("complete!");
              });
      });
+
+     //构造pic node
+     function populate_pic_node(data){
+         var nLength = data.data_s.length;
+
+         if (nLength > 0) {
+             $('#id-pics-list .col-md-12').css('height','auto');
+             $('#info_no_pic').css('display','none');
+         }else{
+             $('#id-pics-list .col-md-12').css('height','300px');
+             $('#info_no_pic').css('display','inline');
+         }
+
+         for (var i=0; i < nLength; i++) {
+             var my_new_pic_node = pic_node_template.clone();
+             var str_cname = data.data_s[i].cname;
+             var str_pic_path = "img/" + data.data_s[i].pics + "1.jpg";
+
+             my_new_pic_node.find('a').attr('title',str_cname)
+                            .find('img').attr('src', str_pic_path)
+                                         .attr('alt',str_cname);
+             my_new_pic_node.find('.q-pri').text(str_cname);
+
+             $('#cpc').append(my_new_pic_node);
+         }
+
+     }
 
      function collect_query_params() {
         var nCount = $('.attr-selected-cnt .attr-list .mt-7').length;
