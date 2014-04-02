@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!--网页元数据-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="Description" content="中国园林植物资源应用数据库及网络咨询服务系统---园林植物模块首页">
+    <meta name="Keywords" content="园林植物，园林应用，园林植物资源数据库，咨询服务">
+    <meta name="Author" content="Dong Zheng">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <!--引入CSS框架-->
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet" media="screen">
+    <link href="/css/site-specific.css" rel="stylesheet" media="screen">
+    <link href="/css/site-plants-specific.css" rel="stylesheet" media="screen">
+    <!--引入js脚本-->
+    <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <!--<script type="text/javascript" src="map/jquery-jvectormap-1.2.2.min.js"></script>-->
+    <!--<script type="text/javascript" src="map/jquery-jvectormap-cn-merc-cn.js"></script>-->
+    <!--<script type="text/javascript" src="map/jquery-jvectormap-us-aea-en.js"></script>-->
+    <script type="text/javascript" src="/js/jquery-multiselectmenu.js"></script>
+    <!--<script type="text/javascript" src="subviews/shangchengcaidan/index_v20.js"></script>-->
+
+    <title>中国园林植物资源应用数据库</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="navbar-header" >
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="/" class="navbar-brand">东林</a>
+                    </div>
+                    <nav class="nav  navbar-collapse" role="navigation"  >
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">园林植物</a></li>
+                            <li>
+                              <%=link_to '景观植物','/plant/plant_querying'  %>
+                              <!--<a href="#">植物景观</a>-->
+                            </li>
+                            <li><a href="#">景观设计施工养护</a></li>
+                            <li><a href="#">园林植物百科全书</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">关于</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="banner" class="banner no-radius">
+        <div class="container text-center">
+        </div>
+    </header>
+    <div class="shadow" style=" -webkit-animation: anim_top2bottom 2s ease-out 0 1 forwards;"></div>
+
+    <article class="container">
+        <section id="id-section-Map" class="row row-section" style="margin-top: -350px;">
+            <div class="col-md-10 col-md-offset-1 panel-styles" style="height: 400px;">
+                <div class="col-md-7 put-left-corners" style="height: 100%;">
+                    <div id="map" class="map-frame-bg" >
+                        <iframe src="map/map.htm" width="569px" height="400px" style="border:0;"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    map_querying
+                </div>
+            </div>
+        </section>
+
+        <section id="id-section-leftmenu" class="row row-section" style="margin-top: 50px;">
+            <div class="col-md-2 col-md-offset-1 panel-styles category-content put-top-corners"
+                 style="width: 201px; height: 421px; ">
+
+                <div><span class="all-goods">植物资源分类<em>（686种）</em></span></div>
+                    <div class="category">
+                        <ul class="category-list" id="js_climit_li">
+                            <li class="appliance js_toggle relative first">
+                                <div class="category-info list-nz">
+                                    <h3 class="category-name b-category-name">
+                                        <i></i>
+                                        <a id="s-category-289"  href="#" target="_blank" class="ml-22"
+                                           title="株型分类">株型分类</a>
+                                    </h3>
+                                    <p class="c-category-list limit-24">
+                                        <a href="#" target="_blank" title="乔木" id="s-goods-category-289-1">乔木</a>
+                                        <a href="#" target="_blank" title="灌木" id="s-goods-category-289-2">灌木</a>
+                                        <a href="#" target="_blank" title="藤本" id="s-goods-category-289-3">藤本</a>
+                                        <a href="#" target="_blank" title="草本" id="s-goods-category-289-4">草本 ...</a>
+                                    </p>
+                                    <em>&gt;</em>
+                                </div>
+                                <textarea class="menu-item-wrap none">&lt;div class="menu-item menu-in top" style="top: -2px; display: block;"&gt;
+                                    &lt;div class="area-in"&gt;
+                                    &lt;div class="area-bg"&gt;
+                                    &lt;div class="menu-srot"&gt;
+                                    &lt;div class="sort-side"&gt;
+                                    &lt;dl class="dl-sort borders-11"&gt;
+                                    &lt;dt&gt;
+                                    &lt;span title="乔木"&gt;&lt;input type="checkbox" name="ck_ZhuXing_qm_0" value="checkbox"&gt;乔木&lt;/span&gt;
+                                    &lt;/dt&gt;
+                                    &lt;dd&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_qm_1" value="checkbox"&gt;大乔木&lt;/span&gt;
+
+                                    &lt;div class="subGroup"&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_qm_11" value="checkbox"&gt;常绿大乔木&lt;/span&gt; &lt;br/&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_qm_12" value="checkbox"&gt;落叶大乔木&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;/dd&gt;
+                                    &lt;dd&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_qm_2" value="checkbox"&gt;亚乔木&lt;/span&gt;
+                                    &lt;/dd&gt;
+                                    &lt;dd&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_qm_3" value="checkbox"&gt;小乔木&lt;/span&gt;
+                                    &lt;/dd&gt;
+                                    &lt;/dl&gt;
+                                    &lt;dl class="dl-sort borders-11"&gt;
+                                    &lt;dt&gt;
+                                    &lt;span title="灌木"&gt;&lt;input type="checkbox" name="ck_ZhuXing_gm_0" value="checkbox"&gt;灌木&lt;/span&gt;
+                                    &lt;/dt&gt;
+                                    &lt;dd&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_gm_1" value="checkbox"&gt;大灌木&lt;/span&gt;
+                                    &lt;/dd&gt;
+                                    &lt;dd&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_gm_2" value="checkbox"&gt;小灌木&lt;/span&gt;
+                                    &lt;/dd&gt;
+                                    &lt;/dl&gt;
+                                    &lt;dl class="dl-sort borders-12"&gt;
+                                    &lt;dt&gt;
+                                    &lt;span title="藤本"&gt;&lt;input type="checkbox" name="ck_ZhuXing_tb_0" value="checkbox"&gt;藤本&lt;/span&gt;
+                                    &lt;/dt&gt;
+                                    &lt;/dl&gt;
+                                    &lt;dl class="dl-sort borders-21"&gt;
+                                    &lt;dt&gt;
+                                    &lt;span title="草本"&gt;&lt;input type="checkbox" name="ck_ZhuXing_cb_0" value="checkbox"&gt;草本&lt;/span&gt;
+                                    &lt;/dt&gt;
+                                    &lt;/dl&gt;
+                                    &lt;dl class="dl-sort borders-21"&gt;
+                                    &lt;dt&gt;
+                                    &lt;span title="草坪及地被"&gt;&lt;input type="checkbox" name="ck_ZhuXing_cpdb_0" value="checkbox"&gt;草坪及地被&lt;/span&gt;
+                                    &lt;/dt&gt;
+                                    &lt;dd&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_cpdb_1" value="checkbox"&gt;草坪&lt;/span&gt;
+                                    &lt;/dd&gt;
+                                    &lt;dd&gt;
+                                    &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_cpdb_2" value="checkbox"&gt;地被&lt;/span&gt;
+                                    &lt;/dd&gt;
+                                    &lt;/dl&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="illustrator_side"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;/div&gt;</textarea>
+                            </li>
+                            <li class="appliance js_toggle relative">
+                                <div class="category-info list-nz">
+                                    <h3 class="category-name b-category-name">
+                                        <i></i>
+                                        <a id="s-category-292" href="#" target="_blank" class="ml-22" title="生态习性">生态习性
+                                        </a>
+                                    </h3>
+                                    <p class="c-category-list limit-24">
+                                        <a id="s-goods-category-292-1" href="#" target="_blank"  title="光照">光照</a>
+                                        <a id="s-goods-category-292-2" href="#" target="_blank" title="湿度">湿度</a>
+                                        <a id="s-goods-category-292-3" href="#" target="_blank" title="水份">水份</a>
+                                        <a id="s-goods-category-292-4" href="#" target="_blank" title="盐碱">盐碱 ...</a>
+                                    </p>
+                                    <em>&gt;</em>
+                                    <textarea class="menu-item-wrap none">
+                                        &lt;div class="menu-item menu-in top" style="top: -2px; display: block;"&gt;
+                                        &lt;div class="area-in"&gt;
+                                        &lt;div class="area-bg"&gt;
+                                        &lt;div class="menu-srot"&gt;
+                                        &lt;div class="sort-side"&gt;
+                                        &lt;dl class="dl-sort borders-11"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="光照"&gt;&lt;input type="checkbox" name="ck_XiXing_gz_0" value="checkbox"&gt;光照&lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_gz_1" value="checkbox"&gt;全光&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_gz_2" value="checkbox"&gt;全光50%&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_gz_3" value="checkbox"&gt;全光30%&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_gz_4" value="checkbox"&gt;直射光&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-11"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="空气湿度"&gt;&lt;input type="checkbox" name="ck_XiXing_sd_0" value="checkbox"&gt;空气湿度
+                                        &lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_sd_1" value="checkbox"&gt;高湿&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_sd_2" value="checkbox"&gt;中等湿度&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_sd_3" value="checkbox"&gt;干燥&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-12"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="土壤水分"&gt;&lt;input type="checkbox" name="ck_XiXing_tr_0" value="checkbox"&gt;土壤水分&lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_tr_1" value="checkbox"&gt;高湿土壤&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_tr_2" value="checkbox"&gt;中湿土壤&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_tr_3" value="checkbox"&gt;干燥土壤&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-21"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="盐碱度"&gt;&lt;input type="checkbox" name="ck_ZhuXing_yj_0" value="checkbox"&gt;盐碱度&lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_yj_1" value="checkbox"&gt;耐盐碱&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_ZhuXing_yj_0" value="checkbox"&gt;不耐盐碱&lt;/span&gt;
+                                        &lt;/dd&gt;
+
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-21"&gt;
+                                        &lt;/dl&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="illustrator_side"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    </textarea>
+                                </div>
+                            </li>
+                            <li class="appliance js_toggle relative">
+                                <div class="category-info list-nz">
+                                    <h3 class="category-name b-category-name">
+                                        <i></i>
+                                        <a id="s-category-293" href="#" target="_blank" class="ml-22" title="植物形状">植物形状
+                                        </a>
+                                    </h3>
+                                    <p class="c-category-list limit-24">
+                                        <a id="s-goods-category-293-1" href="#" target="_blank" title="树形">树形</a>
+                                        <a id="s-goods-category-293-2" href="#"  target="_blank" title="株型">株型</a>
+                                        <a id="s-goods-category-293-3" href="#" target="_blank"  title="...">...</a>
+                                        <a id="s-goods-category-293-4" href="#" target="_blank" title=""></a>
+                                    </p>
+                                    <em>&gt;</em>
+                                    <textarea class="menu-item-wrap none">
+                                        &lt;div class="menu-item menu-in top" style="top: -2px; display: block;"&gt;
+                                        &lt;div class="area-in"&gt;
+                                        &lt;div class="area-bg"&gt;
+                                        &lt;div class="menu-srot"&gt;
+                                        &lt;div class="sort-side"&gt;
+                                        &lt;dl class="dl-sort borders-11"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="树形"&gt;&lt;input type="checkbox" name="ck_XingZhuang_sx_0" value="checkbox"&gt;树形&lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XingZhuang_sx_1" value="checkbox"&gt;纺锤形&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-11"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="株型"&gt;&lt;input type="checkbox" name="ck_XingZhuang_zx_0" value="checkbox"&gt;株型&lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_XiXing_sd_1" value="checkbox"&gt;伞形&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-12"&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-21"&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-21"&gt;
+                                        &lt;/dl&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="illustrator_side"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    </textarea>
+                                </div>
+                            </li>
+                            <li class="appliance js_toggle relative">
+                                <div class="category-info list-nz">
+                                    <h3 class="category-name b-category-name">
+                                        <i></i>
+                                        <a id="s-category-344"  href="#" target="_blank" class="ml-22" title="观赏特征">观赏特征
+                                           </a>
+                                    </h3>
+                                    <p class="c-category-list limit-24">
+                                        <a id="s-goods-category-344-1"  href="#" target="_blank" title="观赏部位">观赏部位</a>
+                                        <a id="s-goods-category-344-2"  href="#" target="_blank" title="观赏时间">观赏时间</a>
+                                        <a id="s-goods-category-344-3" href="#" target="_blank" title="...">...</a>
+                                        <a id="s-goods-category-344-4" href="#" target="_blank" title=""></a>
+                                    </p>
+                                    <em>&gt;</em>
+                                    <textarea class="menu-item-wrap none">
+                                        &lt;div class="menu-item menu-in top" style="top: -2px; display: block;"&gt;
+                                        &lt;div class="area-in"&gt;
+                                        &lt;div class="area-bg"&gt;
+                                        &lt;div class="menu-srot"&gt;
+                                        &lt;div class="sort-side"&gt;
+                                        &lt;dl class="dl-sort borders-11"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="观赏部位"&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_0" value="checkbox"&gt;观赏部位
+                                        &lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_1" value="checkbox"&gt;观花&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_2" value="checkbox"&gt;观叶&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_3" value="checkbox"&gt;观果&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-11"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="观赏时间"&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_0" value="checkbox"&gt;观赏时间&lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_1" value="checkbox"&gt;花期&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_2" value="checkbox"&gt;果期&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_3" value="checkbox"&gt;变叶期&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-12"&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-21"&gt;
+                                        &lt;/dl&gt;
+                                        &lt;dl class="dl-sort borders-21"&gt;
+                                        &lt;/dl&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="illustrator_side"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    </textarea>
+                                </div>
+                            </li>
+                            <li class="appliance js_toggle relative h73">
+                                <div class="category-info list-nz">
+                                    <h3 class="category-name b-category-name">
+                                        <i></i>
+                                        <a id="s-category-343" href="#" target="_blank" class="ml-22" title="功能性状">功能性状
+                                        </a>
+                                    </h3>
+                                    <p class="c-category-list limit-24 pdb11">
+                                        <a id="s-goods-category-343-1" href="#" target="_blank" title="耐湿">耐湿</a>
+                                        <a id="s-goods-category-343-2" href="#" target="_blank" title="耐阴">耐阴</a>
+                                        <a id="s-goods-category-343-3" href="#" target="_blank" title="耐旱">耐旱</a>
+                                        <a id="s-goods-category-343-4" href="#" target="_blank" title="耐寒">耐寒 ...</a></p>
+                                    <em>&gt;</em>
+                                    <textarea class="menu-item-wrap none">
+                                        &lt;div class="menu-item menu-in top" style="top: -2px; display: block;"&gt;
+                                        &lt;div class="area-in"&gt;
+                                        &lt;div class="area-bg"&gt;
+                                        &lt;div class="menu-srot"&gt;
+                                        &lt;div class="sort-side"&gt;
+                                        &lt;dl class="dl-sort2 borders-21"&gt;
+                                        &lt;dt&gt;
+                                        &lt;span title="功能性状"&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_0" value="checkbox"&gt;功能性状
+                                        &lt;/span&gt;
+                                        &lt;/dt&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_1" value="checkbox"&gt;耐水湿&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_2" value="checkbox"&gt;耐阴&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_bw_3" value="checkbox"&gt;耐旱&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_1" value="checkbox"&gt;耐寒&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_2" value="checkbox"&gt;耐热&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_3" value="checkbox"&gt;耐盐碱&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;dd&gt;
+                                        &lt;span&gt;&lt;input type="checkbox" name="ck_GuanShang_sj_3" value="checkbox"&gt;抗污染&lt;/span&gt;
+                                        &lt;/dd&gt;
+                                        &lt;/dl&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="illustrator_side"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    </textarea>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <!--<div class="col-md-6 col-md-offset-1 panel-styles " id="guide_3"-->
+                 <!--style="height: 421px; border-radius: 6px 6px 0 0;">-->
+                  <!--aaa-->
+            <!--</div>-->
+        </section>
+    </article>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>
