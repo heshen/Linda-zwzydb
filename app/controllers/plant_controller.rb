@@ -25,7 +25,6 @@ class PlantController < ApplicationController
 		response_json = {}
 		content_array=[]
 
-		#for i in 0..(n_records - 1) do
 		n_records.times do |i|
 			tmp_j = {}
 			tmp_j["cname"] = records_found[i].cname
