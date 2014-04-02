@@ -7,7 +7,6 @@
 * View-Controller --    基于抽象窗口模型思想
 */
 
-//$(document).ready(function(){
 $(function(){
     //--- Controller1 ----------------------------------------------
     //click()
