@@ -1,3 +1,4 @@
+# encoding: utf-8
 class PlantController < ApplicationController
   def index
 		@myke = Ke.all
@@ -42,7 +43,6 @@ class PlantController < ApplicationController
 		puts "--------response_json-------------"
 		puts response_json
 
-		#render :text => {"a1"=>1, "b1"=>"semuqi"}
 		render :json => response_json.to_json
 
 	end
