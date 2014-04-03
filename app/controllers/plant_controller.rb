@@ -16,14 +16,17 @@ class PlantController < ApplicationController
 
 		#对于String类hash value(形如/乔木/)，hash数据规范化处理：1) 去掉value两端的/号；2) 将value字符串对象转换成Regexp对象；
 		recvd_json.each{ |key, value|
-			unless (/\/.*\// =~ recvd_json[key]).nil?         #处理String型Criteria
-				crit_where_json[key] = recvd_json[key].gsub(/\//,'')
+			crit_where_json[key] = recvd_json[key]              #默认直接在where条件中使用(支持形如{"guanshang.pi":"yes"})的Criteria
+
+			unless (/~.*~/ =~ recvd_json[key]).nil?           #处理String型Criteria(windows下编码有问题，暂时用~作为区隔符)
+				crit_where_json[key] = recvd_json[key].gsub(/~/,'')
 				crit_where_json[key]=Regexp.new(crit_where_json[key])
 			end
 
 			unless (/\[.*\]/ =~ recvd_json[key]).nil?        #处理Array型Criteria
 				crit_in_json[key] = recvd_json[key].gsub(/\[/,'').gsub(/\]/,'')
 				crit_in_json[key] = crit_in_json[key].split(",")                    #返回的就是数组
+				crit_where_json.delete(key)
 			end
 		}
 

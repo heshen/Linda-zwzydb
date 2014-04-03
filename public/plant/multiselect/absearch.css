@@ -622,7 +622,7 @@ a.btn-disable:hover{ color: #ccc;  }
 .attr-cate,.attr-prop{position:relative;*position:none;z-index:7}
 .attr-cate .attr-list li{overflow:hidden}
 .attr-prop .attr-list{width: 100%;height:35px;}
-.attr-prop .attr-list li{width:auto;margin:4px 25px 4px 0}
+.attr-prop .attr-list li{width:auto;margin: 4px 20px 4px 0;}
 .attr-bm{width:100%;position:absolute;bottom:0;*position:relative;*bottom:1px;z-index:7;zoom:1;height:1px;line-height:1px;font-size:1px;background-color:#D1CCC7}
 .attr-num{color:#BFBFBF}
 
