@@ -6,14 +6,14 @@ class Zhong
 
   field :cname, type: String
   field :ldname, type: String
-  field :aliases, type: Array, default: []
-
-  field :chandi,  type: Array, default: []
+  field :aliases, type: Array, default: []        #['别名1','别名2',...]
+  field :chandi,  type: Array, default: []        #['黑龙江','吉林',...]
   field :xingtai, type: String
+  field :huaqi, type: String
   field :xingzhuang,  type: String
-  field :guanshang,   type: Array, default: [{"花"=> ""},{"叶"=>""},{"果"=>""}]
-  field :gongneng,  type: Array, default: []
-  field :pics,  type: String
+  field :guanshang,   type: Array, default: []   #hash数组[{"hua":"yes"},...]
+  field :gongneng,  type: Array, default: []     #['抗污染',"抗病",...]
+  field :pics,  type: String                       #只存储目录名
 
   embeds_one :shengtai, class_name: "Shengtai", validate: false
 
