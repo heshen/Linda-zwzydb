@@ -621,7 +621,7 @@ a.btn-disable:hover{ color: #ccc;  }
 .attr-cate .attr{position:relative;z-index:7}
 .attr-cate,.attr-prop{position:relative;*position:none;z-index:7}
 .attr-cate .attr-list li{overflow:hidden}
-.attr-prop .attr-list{width: 100%;}
+.attr-prop .attr-list{width: 100%;height:35px;}
 .attr-prop .attr-list li{width:auto;margin:4px 25px 4px 0}
 .attr-bm{width:100%;position:absolute;bottom:0;*position:relative;*bottom:1px;z-index:7;zoom:1;height:1px;line-height:1px;font-size:1px;background-color:#D1CCC7}
 .attr-num{color:#BFBFBF}
@@ -981,7 +981,7 @@ b.page-small-len{background:none;line-height:20px;font-weight:400}
 .bid-products-bar .bid-products-list{padding:0 4px;}
 .bid-products-bar .bid-products-list .list-item{margin:14px 5px;width:222px;}
 .ppc-content .info-wrap{width:225px;}
-.attr-bd{width: 701px;}
+.attr-bd{width: 801px;}
 .bid-products-bar .bid-products-list .list-item  .pic{width:220px; height:220px;}
 
 
@@ -1061,7 +1061,7 @@ b.page-small-len{background:none;line-height:20px;font-weight:400}
 .pro-badge{position:absolute;top:0;right:5px;background-color: #d2364c;padding:0 5px 0 8px; border-radius: 3px;color: #fff;}
 
 .bt-ad{width:1232px;margin:10px auto;}
-.area{width: 800px;}
+.area{width: 900px;}
 /* 窄屏 */
 @media screen and (max-width:1260px){
     #sitenav .area,#header .area,.area,#search-nav,.list-view-enlarge{width:980px;margin:0 auto;}
