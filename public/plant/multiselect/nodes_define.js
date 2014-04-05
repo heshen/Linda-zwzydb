@@ -11,11 +11,11 @@ $(function(){
         '<li class="list-item list-item-hover panel-styles">'+
             '<div class="show-cnt">'+
                  '<div class="pic" data-ishow="true">'+
-                    '<a href="/" target="_blank" title="雪纺衫">'+
+                    '<a href="/" target="_blank" title="">'+
                         '<img picsize="220"'+
-                        'src="img/QiaoMu/HanLiu/2.jpg"'+
-                        'alt="雪纺衫"'+
-                        'onerror="this.src=\"/img/no_img.gif\""/>'+
+                        'src=""'+
+                        'alt=""'+
+                        'onerror="this.src=\'/img/no_img.gif\'"/>'+
                     '</a>'+
                  '</div>'+
                  '<div class="goods-info">'+
