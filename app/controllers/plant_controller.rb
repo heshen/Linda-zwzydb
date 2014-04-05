@@ -5,11 +5,13 @@ class PlantController < ApplicationController
 		@myke_name = Ke.all.entries
   end
 
+  # 查询页面
   def plant_querying
 		@mynewtest = "dongzheng is now testing..."
 	end
 
-	def list_plant_querying
+	# Called by ajax, no standalone view.
+  def list_plant_querying
 		recvd_json = params[:q_data]
 		crit_where_json = {}
 		crit_in_json = {}
@@ -45,6 +47,44 @@ class PlantController < ApplicationController
 
 		render :json => {"data_s" => content_array }.to_json
 
+  end
+
+  # 植物详情页
+  def plant_show
+		@q_cname = params[:plant_name]
+	  @zhong = Zhong.where("cname" => @q_cname)
+
+		@b_found = true
+		@b_found = false if @zhong.count == 0
+
+		if @b_found
+			@chandi = @zhong[0].chandi.join(",")
+			@gongneng = @zhong[0].gongneng.join(",")
+
+			@guanshang = []
+			@zhong[0].guanshang.each{|x|
+				case x.keys[0]
+					when "hua"
+						 @guanshang << "观花"
+					when "ye"
+						 @guanshang << "观叶"
+					when "guo"
+						 @guanshang << "观果"
+					when "zhi"
+						 @guanshang << "观枝"
+					when "pi"
+						 @guanshang << "观皮"
+					end
+			}
+			@guanshang = @guanshang.join(",")
+
+
+		end
+
+
 	end
 
 end
+
+
+
