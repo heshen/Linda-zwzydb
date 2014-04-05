@@ -10,6 +10,8 @@ class Engineering
   field :shigong_yaodian, type: String
   field :yanghu_yaodian, type: String
   field :cankao_jiage, type: String
+  field :yingyong_quyu, type: String
+  field :ziran_quyu, type: String
 
   embedded_in :zhong
 

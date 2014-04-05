@@ -12,8 +12,8 @@ class Shengtai
 	field :soil, type: String
 	field :genxi, type: String
 	field :nanyi, type: String
-	field :sudu, type String
-	field :shouming, type String
+	field :sudu, type: String
+	field :shouming, type: String
 
 	embedded_in :zhong
 
