@@ -1,0 +1,76 @@
+#plant-title {
+  margin: 40px 2px 25px 2px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#plant-title #bar-line {
+  height: 1px;
+  width: auto;
+  background-color: #d8d8d8;
+}
+#id-details-panel {
+  padding-bottom: 15px;
+}
+#id-show-right-panel {
+  border: 5px solid #E38D13;
+  margin-top: 14px;
+  padding: 15px 15px;
+}
+#id-show-right-panel .panel-header {
+  background-color: #3C85C4;
+  font-weight: bold;
+  color: #ffffff;
+  height: 35px;
+  border-radius: 2px;
+}
+#id-show-right-panel .panel-header #header-text {
+  display: block;
+  float: left;
+  margin: 2px 6px;
+  padding: 4px;
+  font-size: 18px;
+}
+#id-show-right-panel .panel-body span {
+  display: block;
+  float: left;
+  background-color: #c0a16b;
+  margin: 5px 6px;
+  border-radius: 2px;
+  padding: 4px;
+  font-size: 10px;
+}
+.panel-title {
+  font-weight: bold;
+  color: #ffffff;
+  widows: 255px;
+}
+.panel-body {
+  padding: 15px 5px 3px 5px;
+}
+.disp-pic .pics-left-col {
+  padding-left: 10px;
+  padding-right: 2px;
+}
+.disp-pic .pics-right-col {
+  padding-left: 3px;
+  padding-right: 10px;
+}
+.disp-pic a {
+  margin-bottom: 7px;
+}
+.quhua_list {
+  margin-bottom: 0px;
+}
+.quhua_list .panel-heading {
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.quhua_list .panel-body {
+  padding-top: 3px;
+}
+.quhua_list .panel-body ul {
+  padding-left: 5px;
+  font-size: 13px;
+}
