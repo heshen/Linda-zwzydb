@@ -16,6 +16,7 @@ class Zhong
   field :pics,  type: String                       #只存储目录名
 
   embeds_one :shengtai, class_name: "Shengtai", validate: false
+  embeds_one :engineering, class_name: "Engineering", validate: false
 
   belongs_to :shu
 

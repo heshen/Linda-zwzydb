@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!--网页元数据-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="Description" content="中国园林植物资源应用数据库及网络咨询服务系统---园林植物模块首页">
+    <meta name="Keywords" content="园林植物，园林应用，园林植物资源数据库，咨询服务">
+    <meta name="Author" content="Dong Zheng">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <!--引入CSS框架-->
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet" media="screen">
+    <link href="/css/site-specific.css" rel="stylesheet" media="screen">
+    <link href="/css/site-plants-specific.css" rel="stylesheet" media="screen">
+    <link href="/plant/css/plant_show.css" rel="stylesheet" media="screen">
+    <!--引入js脚本-->
+    <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/holder.js"></script>
+
+    <title>中国园林植物资源应用数据库</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="navbar-header" >
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="/" class="navbar-brand">首页</a>
+                    </div>
+                    <nav class="nav  navbar-collapse" role="navigation"  >
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">园林植物</a></li>
+                            <li>
+                              <%=link_to '景观植物','/plant/plant_querying'  %>
+                              <!--<a href="#">植物景观</a>-->
+                            </li>
+                            <li><a href="#">景观设计施工养护</a></li>
+                            <li><a href="#">园林植物百科全书</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">关于</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="banner" class="banner no-radius">
+        <div class="container text-center">
+        </div>
+    </header>
+    <div class="shadow" style=" -webkit-animation: anim_top2bottom 2s ease-out 0 1 forwards;"></div>
+
+    <article class="container">
+
+      <section id="id-plant-show" class="row row-section" style="margin-top: -400px">
+        <div id="id-details-panel" class="col-md-10 col-md-offset-1  panel-styles">
+          <div class="col-md-8 put-left-corners" style="height: 100%;">
+            <div id="plant-title" class="row">
+                  <%= @zhong[0].cname %>
+              <div id="bar-line"></div>
+            </div>
+            <div id="plant-toppart" class="row ">
+              <div class="col-md-5 plant-toppart-a">
+                <a href="#" class="thumbnail">
+                  <img src="../img/1.jpg"  alt="abc111">
+                </a>
+                <a href="#" class="thumbnail">
+                  <img src="../img/3.jpg" alt="...">
+                </a>
+              </div>
+              <div class="col-md-7">
+                <div><span>名称: </span> <%= @zhong[0].cname %></div>
+                <div><span>拉丁名: </span> <%= @zhong[0].shu.ke.name %> <span>/</span><%= @zhong[0].shu.name %> </div>
+                <div><span>科/属: </span> <%= @zhong[0].cname %></div>
+                <div><span>形态: </span>  <%= @zhong[0].xingtai %></div>
+                <div><span>株型: </span> <%= @zhong[0].xingzhuang %></div>
+                <div><span>适宜光照环境: </span> <%= @zhong[0].shengtai.light %></div>
+                <div><span>土壤水分: </span>  <%= @zhong[0].shengtai.moisture %></div>
+                <div><span>空气湿度: </span> <%= @zhong[0].shengtai.huminity %></div>
+
+                <div><span>寿命: </span> </div>
+                <div><span>生长速度: </span> </div>
+                <div><span>根系: </span>  </div>
+                <div><span>栽植难易性: </span> </div>
+                <div><span>观赏部位: </span> <%=@guanshang %></div>
+                <div><span>功能性状: </span> <%=@zhong[0].gongneng.join(",") %></div>
+
+              </div>
+
+            </div>
+            <div id="plant-bottompart" class="row">
+              <div><span>花期: </span> <%=@zhong[0].huaqi %></div>
+              <div><span>温度: </span> <%=@zhong[0].shengtai.temperature %></div>
+              <div><span>土壤: </span> <%=@zhong[0].shengtai.soil %></div>
+              <div><span>主要识别特征: </span> </div>
+              <div><span>种植密度: </span> </div>
+              <div><span>苗木规格: </span> </div>
+              <div><span>设计建议: </span> </div>
+              <div><span>施工要点: </span> </div>
+              <div><span>养护要点: </span> </div>
+              <div><span>参考价格: </span> </div>
+
+
+
+
+
+
+            </div>
+
+
+          </div>
+
+          <div class="col-md-4">
+            <div id="id-show-right-panel">
+
+              <div class="panel panel-default">
+                <div class="panel-header"><span id="header-text">植物科</span></div>
+                <div class="panel-body">
+                  <span>蔷薇科</span>
+                  <span>百合科</span>
+                  <span>仙人掌科</span>
+                  <span>菊科</span>
+                  <span>豆科</span>
+                  <span>禾本科</span>
+                  <span>松科</span>
+                  <span>十字花科</span>
+                  <span>忍冬科</span>
+                  <span>唇形科</span>
+                  <span>睡莲科</span>
+                  <span>景天科</span>
+                  <span>木樨科</span>
+                  <span>杜鹃花科</span>
+                  <span>茄科</span>
+                  <span>锦葵科</span>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-header"><span id="header-text">植物图片库</span></div>
+                <div class="panel-body" >
+                  <div class="row disp-pic">
+                    <div class="col-md-6 pics-left-col">
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg"  alt="abc111">
+                      </a>
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg" alt="...">
+                      </a>
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg" alt="...">
+                      </a>
+                    </div>
+
+                    <div class="col-md-6 pics-right-col">
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg" alt="abc111">
+                      </a>
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg" alt="...">
+                      </a>
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg" alt="...">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="height: 20px"></div>
+                <div class="panel panel-default quhua_list">
+                  <div class="panel-heading">园林植物区划及代表城市</div>
+                  <div class="panel-body">
+                    <ul>
+                      <li>II区 温带针阔叶混交林区         [哈尔滨]</li>
+                      <li>III区 北部暖温带落叶阔叶林区    [北京]</li>
+                      <li>IV区 南部暖温带落叶阔叶林区     [郑州]</li>
+                      <li>V区 北亚热带落叶/阔叶混交林区   [南京]</li>
+                      <li>VI区 中亚热带常绿/落叶阔叶林区  [杭州]</li>
+                      <li>VII区 南亚热带常绿阔叶林区     [广州]</li>
+                      <li>VIII区 热带季雨林及雨林区      [海口]</li>
+                      <li>IX区 温带草原区                [兰州]</li>
+                      <li>X区 温带荒漠区                 [乌鲁木齐]</li>
+                    </ul>
+                  </div>
+                </div>
+
+
+
+            </div> <!--id="id-kes-list-panel"-->
+
+          </div> <!--id-details-right-panel-->
+
+          </div>
+        </div>
+      </section>
+
+      <% if @b_found  %>
+          <%= @zhong[0].shu.ke.name %> <br/>
+          <%= @zhong[0].shu.name %> <br/>
+          <%= @zhong[0].cname %> <br/>
+          <%= @zhong[0].ldname %> <br/>
+          <%= @zhong[0].xingtai %>   <br/>
+          <%= @zhong[0].xingzhuang %>  <br/>
+          <%= @zhong[0].huaqi %>      <br/>
+          <%= @zhong[0].chandi.join(",") %>      <br/>
+          <%= @zhong[0].gongneng.join(",") %>      <br/>
+          <%= @guanshang %> <br/>
+	      <%= @zhong[0].shengtai.light %>
+      <% else %>
+          <p>没有找到植物：</p> <%= @q_cname %>
+      <% end %>
+
+
+    </article>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>
