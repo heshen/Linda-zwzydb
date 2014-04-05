@@ -81,43 +81,80 @@
                 </a>
               </div>
               <div class="col-md-7">
-                <div><span>名称: </span> <%= @zhong[0].cname %></div>
-                <div><span>拉丁名: </span> <%= @zhong[0].shu.ke.name %> <span>/</span><%= @zhong[0].shu.name %> </div>
-                <div><span>科/属: </span> <%= @zhong[0].cname %></div>
-                <div><span>形态: </span>  <%= @zhong[0].xingtai %></div>
-                <div><span>株型: </span> <%= @zhong[0].xingzhuang %></div>
-                <div><span>适宜光照环境: </span> <%= @zhong[0].shengtai.light %></div>
-                <div><span>土壤水分: </span>  <%= @zhong[0].shengtai.moisture %></div>
-                <div><span>空气湿度: </span> <%= @zhong[0].shengtai.huminity %></div>
+                <div class="field_row"><span class="field_label" >名称: </span> <span class="field_content"><%= @zhong[0]
+                                                                                                        .cname
+                %></span></div>
+                <div class="field_row"><span class="field_label">拉丁名: </span> <span class="field_content"><%= @zhong[0].shu.ke.name %>
+                  <span>/</span><%= @zhong[0]
+                                                                                                          .shu.name %></span></div>
+                <div class="field_row"><span class="field_label">科/属: </span> <span class="field_content"><%= @zhong[0].cname
+                %></span></div>
+                <div class="field_row"><span class="field_label">形态: </span>  <span class="field_content"><%= @zhong[0].xingtai
+                %></span></div>
+                <div class="field_row"><span class="field_label">株型: </span> <span class="field_content"><%= @zhong[0].xingzhuang
+                %></span></div>
+                <div class="field_row"><span class="field_label">适宜光照环境: </span> <span class="field_content"><%= @zhong[0].shengtai.light
+                %></span></div>
+                <div class="field_row"><span class="field_label">土壤水分: </span>  <span class="field_content"><%= @zhong[0].shengtai
+                                                                                           .moisture %></span></div>
+                <div class="field_row"><span class="field_label">空气湿度: </span> <span class="field_content"><%= @zhong[0].shengtai.huminity
+                %></span></div>
+                <div class="field_row"><span class="field_label">寿命: </span> <span class="field_content"><%= @zhong[0].shengtai.shouming
+                %></span></div>
+                <div class="field_row"><span class="field_label">生长速度: </span><span class="field_content"><%= @zhong[0].shengtai.sudu
+                %></span></div>
+                <div class="field_row"><span class="field_label">根系: </span> <span class="field_content"><%= @zhong[0].shengtai.genxi
+                %></span></div>
+                <div class="field_row"><span class="field_label">栽植难易性: </span><span class="field_content"><%= @zhong[0].shengtai.nanyi
+                %></span></div>
+                <div class="field_row"><span class="field_label">观赏部位: </span> <span class="field_content"><%=@guanshang %></span></div>
+                <div class="field_row"><span class="field_label">功能性状: </span> <span class="field_content"><%=@zhong[0].gongneng.join(",
+                ") %></span></div>
+              </div>
+            </div>
 
-                <div><span>寿命: </span> </div>
-                <div><span>生长速度: </span> </div>
-                <div><span>根系: </span>  </div>
-                <div><span>栽植难易性: </span> </div>
-                <div><span>观赏部位: </span> <%=@guanshang %></div>
-                <div><span>功能性状: </span> <%=@zhong[0].gongneng.join(",") %></div>
+            <div id="plant-bottompart" class="row">
+              <div class="field_row"><span class="field_label">花期: </span> <span class="field_content"><%=@zhong[0].huaqi %></span></div>
+              <div class="field_row"><span class="field_label">温度: </span> <span class="field_content"><%=@zhong[0].shengtai.temperature
+              %></span></div>
+              <div class="field_row"><span class="field_label">土壤: </span> <span class="field_content"><%=@zhong[0].shengtai.soil
+              %></span></div>
+              <div class="field_row"><span class="field_label">主要识别特征: </span><span class="field_content"><%=@zhong[0].engineering
+                                                                                        .shibie_tezheng %></span></div>
+              <div class="field_row"><span class="field_label">种植密度: </span> <span class="field_content"><%=@zhong[0].engineering
+                                                                                       .zhongzhi_midu %></span></div>
+              <div class="field_row"><span class="field_label">苗木规格: </span> <span class="field_content"><%=@zhong[0].engineering
+                                                                                       .miaomu_guige %></span></div>
+              <div class="field_row"><span class="field_label">设计建议: </span> <span class="field_content"><%=@zhong[0].engineering
+                                                                                       .sheji_jianyi %></span></div>
+              <div class="field_row"><span class="field_label">施工要点: </span> <span class="field_content"><%=@zhong[0].engineering
+                                                                                       .shigong_yaodian %></span></div>
+              <div class="field_row"><span class="field_label">养护要点: </span> <span class="field_content"><%=@zhong[0].engineering
+                                                                                       .yanghu_yaodian %></span></div>
+              <div class="field_row"><span class="field_label">参考价格: </span> <span class="field_content"><%=@zhong[0].engineering
+                                                                                       .cankao_jiage %></span></div>
+            </div>
+            <div id="plant-bottom-pics" class="row">
+              <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                  <img src="../img/1.jpg"  alt="abc111">
+                </a>
+                <a href="#" class="thumbnail">
+                  <img src="../img/3.jpg" alt="...">
+                </a>
+              </div>
 
+              <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                  <img src="../img/1.jpg"  alt="abc111">
+                </a>
+                <a href="#" class="thumbnail">
+                  <img src="../img/3.jpg" alt="...">
+                </a>
               </div>
 
             </div>
-            <div id="plant-bottompart" class="row">
-              <div><span>花期: </span> <%=@zhong[0].huaqi %></div>
-              <div><span>温度: </span> <%=@zhong[0].shengtai.temperature %></div>
-              <div><span>土壤: </span> <%=@zhong[0].shengtai.soil %></div>
-              <div><span>主要识别特征: </span> </div>
-              <div><span>种植密度: </span> </div>
-              <div><span>苗木规格: </span> </div>
-              <div><span>设计建议: </span> </div>
-              <div><span>施工要点: </span> </div>
-              <div><span>养护要点: </span> </div>
-              <div><span>参考价格: </span> </div>
 
-
-
-
-
-
-            </div>
 
 
           </div>
@@ -161,11 +198,17 @@
                       <a href="#" class="thumbnail">
                         <img src="../img/1.jpg" alt="...">
                       </a>
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg" alt="...">
+                      </a>
                     </div>
 
                     <div class="col-md-6 pics-right-col">
                       <a href="#" class="thumbnail">
                         <img src="../img/1.jpg" alt="abc111">
+                      </a>
+                      <a href="#" class="thumbnail">
+                        <img src="../img/1.jpg" alt="...">
                       </a>
                       <a href="#" class="thumbnail">
                         <img src="../img/1.jpg" alt="...">
