@@ -1,5 +1,6 @@
 # encoding: utf-8
 LindaZwzydb::Application.routes.draw do
+  get "plant/plant_show"
   get "plant/list_plant_querying"
   get "plant/map_querying"
   get "plant/plant_querying"
@@ -8,7 +9,9 @@ LindaZwzydb::Application.routes.draw do
   #get "plant/index"
 
   match '/', to: 'plant#index', via: [:get, :post]
-  # The priority is based upon order of creation: first created -> highest priority.
+  match 'plant/plant_show(/:plant_name)',:controller => 'plant', :action => 'plant_show' , via: [:get,:post]
+
+	# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

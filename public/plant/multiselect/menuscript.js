@@ -163,6 +163,7 @@ $(function(){
              var str_cname = data.data_s[i].cname;
              var str_pic_path = "img/" + data.data_s[i].pics + "1.jpg";
 
+             my_new_pic_node.find('a').attr('href','/plant/plant_show/'+str_cname);
              my_new_pic_node.find('a').attr('title',str_cname)
                             .find('img').attr('src', str_pic_path)
                                          .attr('alt',str_cname);
@@ -176,7 +177,7 @@ $(function(){
      function collect_query_params() {
         var nCount = $('.attr-selected-cnt .attr-list .mt-7').length;
         if (nCount<= 1) {
-            alert ("请您选择筛选条件！")
+            alert ("请您选择筛选条件！");
             return 0;
         }
 
@@ -187,8 +188,8 @@ $(function(){
             var jsonQstr = eval("("+txtTemp+")");
             param_hash = mergeJsonObject(param_hash,jsonQstr);
         }
-        param_hash = {q_data: param_hash};
-        return param_hash;
+
+        return {q_data: param_hash};
      }
 
     /**
