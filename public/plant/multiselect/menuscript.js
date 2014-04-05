@@ -50,6 +50,8 @@ $(function(){
                 my_new_node.find('span.qstr').attr('category',strCategory).text(strQstr);
 
                 $('.attr-selected-cnt .attr-list').append(my_new_node);
+
+                $('#btn_query').trigger("click");
             });
         };
         funTemp(i); //闭包，当即执行之解决方案。
@@ -83,6 +85,8 @@ $(function(){
                 my_new_node.find('span.qstr').attr('category',strCategory).text(strQstr);
 
                 $('.attr-selected-cnt .attr-list').append(my_new_node);
+
+                $('#btn_query').trigger("click");
             });
         };
         funTemp2(j); //闭包，当即执行之解决方案。
@@ -106,6 +110,8 @@ $(function(){
              $(strSelectorLine).find('span').removeClass('choosen');
          }
 
+         $('#btn_query').trigger("click");
+
      });
 
     //--- Controller3 ----------------------------------------------
@@ -121,6 +127,8 @@ $(function(){
     //click()
      $('#btn_query').click(function(){
          var ajax_params = collect_query_params();
+         if (ajax_params == 0) return;
+
          $.ajax({
              url: "/plant/list_plant_querying",
              data: ajax_params
