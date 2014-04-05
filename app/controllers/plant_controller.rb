@@ -5,7 +5,7 @@ class PlantController < ApplicationController
 		@myke_name = Ke.all.entries
   end
 
-	def plant_querying
+  def plant_querying
 		@mynewtest = "dongzheng is now testing..."
 	end
 
@@ -34,31 +34,14 @@ class PlantController < ApplicationController
 		records_found = Zhong.where(crit_where_json).in(crit_in_json)           #数组用in为or关系；all为and关系；
 		n_records = records_found.count
 
-
 		#循环构造返回hash
 		content_array=[]
-		response_json = {}
-
 		n_records.times do |i|
 			tmp_j = {}
 			tmp_j["cname"] = records_found[i].cname
 			tmp_j["pics"] = records_found[i].pics
 			content_array << tmp_j
 		end
-
-
-		response_json = {"data_s" => content_array }
-
-		puts "--------rec_json--------------"
-		puts recvd_json
-		puts "--------n_records-------------"
-		puts n_records
-		puts "--------crit_where_json-------------"
-		puts crit_where_json
-		puts "--------crit_in_json-------------"
-		puts crit_in_json
-		puts "--------response_json-------------"
-		puts response_json
 
 		render :json => {"data_s" => content_array }.to_json
 
