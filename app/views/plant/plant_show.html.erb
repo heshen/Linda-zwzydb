@@ -19,6 +19,7 @@
     <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
     <script type="text/javascript" src="/js/holder.js"></script>
+    <script type="text/javascript" src="/plant/multiselect/plant_show.js"></script>
 
     <title>中国园林植物资源应用数据库</title>
 </head>
@@ -84,11 +85,9 @@
                 <div class="field_row"><span class="field_label" >名称: </span> <span class="field_content"><%= @zhong[0]
                                                                                                         .cname
                 %></span></div>
-                <div class="field_row"><span class="field_label">拉丁名: </span> <span class="field_content"><%= @zhong[0].shu.ke.name %>
-                  <span>/</span><%= @zhong[0]
-                                                                                                          .shu.name %></span></div>
-                <div class="field_row"><span class="field_label">科/属: </span> <span class="field_content"><%= @zhong[0].cname
-                %></span></div>
+                <div class="field_row"><span class="field_label">拉丁名: </span> <span class="field_content"><%= @zhong[0].ldname %></span></div>
+                <div class="field_row"><span class="field_label">科/属: </span> <span class="field_content"><%= @zhong[0].shu.ke.name %>
+                  <span>/</span><%= @zhong[0].shu.name %></span></div>
                 <div class="field_row"><span class="field_label">形态: </span>  <span class="field_content"><%= @zhong[0].xingtai
                 %></span></div>
                 <div class="field_row"><span class="field_label">株型: </span> <span class="field_content"><%= @zhong[0].xingzhuang
