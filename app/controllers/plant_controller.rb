@@ -52,7 +52,11 @@ class PlantController < ApplicationController
   # 植物详情页
   def plant_show
 		@q_cname = params[:plant_name]
+		@pic_dir1 = params[:picdir1]
+		@pic_dir2 = params[:picdir2]
+
 	  @zhong = Zhong.where("cname" => @q_cname)
+		@ke = Ke.all
 
 		@b_found = true
 		@b_found = false if @zhong.count == 0
@@ -78,7 +82,42 @@ class PlantController < ApplicationController
 			}
 			@guanshang = @guanshang.join(",")
 
+			pic_path = File.join("public","plant","img",@pic_dir1,@pic_dir2)
+			@img_count = Dir.entries(pic_path).count - 3
 
+			Dir.chdir("public")    #临时从/Linda-zwzydb根目录，进入到public子目录；用于生成相对于/plant为根目录的图片asset路径；
+			all_pic_dir_pattern = File.join("plant","img","**","*.jpg")
+			@all_pic_path_arr = Dir.glob(all_pic_dir_pattern)
+			Dir.chdir("../")       #返回/Linda-zwzydb根目录
+
+			@all_img_count = @all_pic_path_arr.count
+
+			@all_img_arr = []
+			@name_map = NameMap.all[0]  #种名中英文对照表
+			for i in 1..6 do
+				tmp_arr = []
+				rand_num = rand(@all_img_count)
+				src_path = "/"+@all_pic_path_arr[rand_num]
+				tmp_arr << src_path
+				en_name = /\/.*\/.*\/(?<name>.*)\/.*/.match(src_path)[:name]
+				puts "------en_name-----"
+				puts en_name
+				cn_name = @name_map.names[en_name]
+				puts "------cn_name-----"
+				puts cn_name
+
+				tmp_arr << cn_name
+
+				@all_img_arr << tmp_arr
+			end
+
+			puts "------@all_img_arr---------"
+			for i in 0..5 do
+			   puts @all_img_arr[i][0]
+			   puts "--and ---"
+				 puts @all_img_arr[i][1]
+			end
+			puts "---------------------------"
 		end
 
 

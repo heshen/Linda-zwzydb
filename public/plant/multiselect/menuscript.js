@@ -163,7 +163,7 @@ $(function(){
              var str_cname = data.data_s[i].cname;
              var str_pic_path = "img/" + data.data_s[i].pics + "1.jpg";
 
-             my_new_pic_node.find('a').attr('href','/plant/plant_show/'+str_cname);
+             my_new_pic_node.find('a').attr('href','/plant/plant_show/'+str_cname+"+"+data.data_s[i].pics);
              my_new_pic_node.find('a').attr('title',str_cname)
                             .find('img').attr('src', str_pic_path)
                                          .attr('alt',str_cname);

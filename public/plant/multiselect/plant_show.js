@@ -7,6 +7,6 @@
  */
 
 $(function(){
-    alert("hahaha!!!") ;
+//    alert("hahaha!!!") ;
 });
 
