@@ -14,7 +14,10 @@
     <link href="/css/bootstrap-theme.css" rel="stylesheet" media="screen">
     <link href="/css/site-specific.css" rel="stylesheet" media="screen">
     <link href="/css/site-plants-specific.css" rel="stylesheet" media="screen">
+    <!--<link href="/plant/css/plant_show.css" rel="stylesheet" media="screen">-->
+    <link type="text/css" rel="stylesheet" href="/plant/multiselect/absearch.css">
     <link href="/plant/css/plant_show.css" rel="stylesheet" media="screen">
+
     <!--引入js脚本-->
     <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
@@ -72,14 +75,19 @@
                   <%= @zhong[0].cname %>
               <div id="bar-line"></div>
             </div>
-            <div id="plant-toppart" class="row ">
+            <div id="plant-toppart" class="row">
               <div class="col-md-5 plant-toppart-a">
-                <a href="#" class="thumbnail">
-                  <img src="../img/1.jpg"  alt="abc111">
+
+                <a href="#" class="thumbnail" title=<%= @q_cname%>>
+                  <img src= <%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"1.jpg" %>  alt=<%= @q_cname%>/>
                 </a>
-                <a href="#" class="thumbnail">
-                  <img src="../img/3.jpg" alt="...">
+
+                <% if @img_count > 1 %>
+                <a href="#" class="thumbnail"  title=<%= @q_cname%>>
+                  <img src=<%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"2.jpg" %> alt=<%= @q_cname%>>
                 </a>
+	            <% end %>
+
               </div>
               <div class="col-md-7">
                 <div class="field_row"><span class="field_label" >名称: </span> <span class="field_content"><%= @zhong[0]
@@ -87,7 +95,7 @@
                 %></span></div>
                 <div class="field_row"><span class="field_label">拉丁名: </span> <span class="field_content"><%= @zhong[0].ldname %></span></div>
                 <div class="field_row"><span class="field_label">科/属: </span> <span class="field_content"><%= @zhong[0].shu.ke.name %>
-                  <span>/</span><%= @zhong[0].shu.name %></span></div>
+                  <span>/</span><%=" "+@zhong[0].shu.name %></span></div>
                 <div class="field_row"><span class="field_label">形态: </span>  <span class="field_content"><%= @zhong[0].xingtai
                 %></span></div>
                 <div class="field_row"><span class="field_label">株型: </span> <span class="field_content"><%= @zhong[0].xingzhuang
@@ -113,6 +121,12 @@
             </div>
 
             <div id="plant-bottompart" class="row">
+              <div class="field_row"><span class="field_label">中国自然分布区域: </span> <span
+                   class="field_content"><%=@zhong[0].engineering.ziran_quyu %></span></div>
+              <div class="field_row"><span class="field_label">中国应用区域(省/市): </span> <span
+                   class="field_content"><%=@chandi %></span></div>
+
+
               <div class="field_row"><span class="field_label">花期: </span> <span class="field_content"><%=@zhong[0].huaqi %></span></div>
               <div class="field_row"><span class="field_label">温度: </span> <span class="field_content"><%=@zhong[0].shengtai.temperature
               %></span></div>
@@ -133,29 +147,29 @@
               <div class="field_row"><span class="field_label">参考价格: </span> <span class="field_content"><%=@zhong[0].engineering
                                                                                        .cankao_jiage %></span></div>
             </div>
+
             <div id="plant-bottom-pics" class="row">
               <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                  <img src="../img/1.jpg"  alt="abc111">
+                <% nTemp = 3 %>
+                <% while nTemp <= @img_count do %>
+                <a href="#" class="thumbnail"  title=<%= @q_cname%>>
+                  <img src=<%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
                 </a>
-                <a href="#" class="thumbnail">
-                  <img src="../img/3.jpg" alt="...">
-                </a>
+	            <% nTemp = nTemp + 2 %>
+	            <% end %>
               </div>
 
               <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                  <img src="../img/1.jpg"  alt="abc111">
-                </a>
-                <a href="#" class="thumbnail">
-                  <img src="../img/3.jpg" alt="...">
-                </a>
+                <% nTemp = 4 %>
+                <% while nTemp <= @img_count do %>
+                    <a href="#" class="thumbnail"  title=<%= @q_cname%>>
+                      <img src=<%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
+                    </a>
+                    <% nTemp = nTemp + 2 %>
+                <% end %>
               </div>
 
             </div>
-
-
-
           </div>
 
           <div class="col-md-4">
@@ -164,22 +178,11 @@
               <div class="panel panel-default">
                 <div class="panel-header"><span id="header-text">植物科</span></div>
                 <div class="panel-body">
-                  <span>蔷薇科</span>
-                  <span>百合科</span>
-                  <span>仙人掌科</span>
-                  <span>菊科</span>
-                  <span>豆科</span>
-                  <span>禾本科</span>
-                  <span>松科</span>
-                  <span>十字花科</span>
-                  <span>忍冬科</span>
-                  <span>唇形科</span>
-                  <span>睡莲科</span>
-                  <span>景天科</span>
-                  <span>木樨科</span>
-                  <span>杜鹃花科</span>
-                  <span>茄科</span>
-                  <span>锦葵科</span>
+
+                  <% for i in 0..@ke.count - 1 %>
+                      <a href="#" class="attr-item"><span><%=@ke[i].name %></span></a>
+                  <% end %>
+
                 </div>
               </div>
 
@@ -187,35 +190,23 @@
                 <div class="panel-header"><span id="header-text">植物图片库</span></div>
                 <div class="panel-body" >
                   <div class="row disp-pic">
+
                     <div class="col-md-6 pics-left-col">
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg"  alt="abc111">
+                      <% for i in 0..2 do %>
+                      <a href="#" class="thumbnail" title=<%= @all_img_arr[i][1]%>>
+                        <img src=<%= @all_img_arr[i][0] %> alt=<%= @all_img_arr[i][1]  %>>
                       </a>
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg" alt="...">
-                      </a>
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg" alt="...">
-                      </a>
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg" alt="...">
-                      </a>
+	                  <% end %>
                     </div>
 
                     <div class="col-md-6 pics-right-col">
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg" alt="abc111">
-                      </a>
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg" alt="...">
-                      </a>
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg" alt="...">
-                      </a>
-                      <a href="#" class="thumbnail">
-                        <img src="../img/1.jpg" alt="...">
-                      </a>
+                      <% for i in 3..5 do %>
+                          <a href="#" class="thumbnail" title=<%= @all_img_arr[i][1]%>>
+                            <img src=<%= @all_img_arr[i][0] %> alt=<%= @all_img_arr[i][1]  %>>
+                          </a>
+                      <% end %>
                     </div>
+
                   </div>
                 </div>
 
@@ -247,24 +238,8 @@
         </div>
       </section>
 
-      <% if @b_found  %>
-          <%= @zhong[0].shu.ke.name %> <br/>
-          <%= @zhong[0].shu.name %> <br/>
-          <%= @zhong[0].cname %> <br/>
-          <%= @zhong[0].ldname %> <br/>
-          <%= @zhong[0].xingtai %>   <br/>
-          <%= @zhong[0].xingzhuang %>  <br/>
-          <%= @zhong[0].huaqi %>      <br/>
-          <%= @zhong[0].chandi.join(",") %>      <br/>
-          <%= @zhong[0].gongneng.join(",") %>      <br/>
-          <%= @guanshang %> <br/>
-	      <%= @zhong[0].shengtai.light %>
-      <% else %>
-          <p>没有找到植物：</p> <%= @q_cname %>
-      <% end %>
-
-
     </article>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+    <!--<br/><br/><br/><br/><br/>-->
 </body>
 </html>

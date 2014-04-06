@@ -9,7 +9,8 @@ LindaZwzydb::Application.routes.draw do
   #get "plant/index"
 
   match '/', to: 'plant#index', via: [:get, :post]
-  match 'plant/plant_show(/:plant_name)',:controller => 'plant', :action => 'plant_show' , via: [:get,:post]
+  match 'plant/plant_show(/:plant_name+:picdir1/:picdir2)',:controller => 'plant', :action => 'plant_show' ,
+        via: [:get,:post]
 
 	# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

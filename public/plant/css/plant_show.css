@@ -1,7 +1,27 @@
+#plant-toppart .col-md-7 {
+  padding-left: 0px;
+}
+#plant-toppart .field_row {
+  margin: 6px 6px 6px 2px;
+}
+#plant-bottompart .field_row {
+  margin: 12px 12px 8px 20px;
+}
+.field_label {
+  font-weight: bold;
+  font-family: Microsoft YaHei;
+  font-size: 14px;
+  margin-right: 6px;
+}
+.field_content {
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+}
 #plant-title {
   margin: 40px 2px 25px 2px;
   font-size: 30px;
   font-weight: bold;
+  font-family: DFKai-SB;
   text-align: center;
 }
 #plant-title #bar-line {
@@ -73,4 +93,21 @@
 .quhua_list .panel-body ul {
   padding-left: 5px;
   font-size: 13px;
+}
+.attr-item {
+  padding: 0px;
+  margin: 0px;
+}
+.attr-item a {
+  color: #000000;
+}
+.panel-body a {
+  color: #000000;
+}
+.panel-body a:hover,
+.panel-body a:active {
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  transform: translateY(-3px);
+  color: #C10001;
 }
