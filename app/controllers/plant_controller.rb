@@ -62,25 +62,10 @@ class PlantController < ApplicationController
 		@b_found = false if @zhong.count == 0
 
 		if @b_found
-			@chandi = @zhong[0].chandi.join(",")
+			@yingyong_quyu = @zhong[0].engineering.yingyong_quyu.join(",")
 			@gongneng = @zhong[0].gongneng.join(",")
 
-			@guanshang = []
-			@zhong[0].guanshang.each{|x|
-				case x.keys[0]
-					when "hua"
-						 @guanshang << "观花"
-					when "ye"
-						 @guanshang << "观叶"
-					when "guo"
-						 @guanshang << "观果"
-					when "zhi"
-						 @guanshang << "观枝"
-					when "pi"
-						 @guanshang << "观皮"
-					end
-			}
-			@guanshang = @guanshang.join(",")
+			@guanshang = @zhong[0].guanshang.join(",")
 
 			pic_path = File.join("public","plant","img",@pic_dir1,@pic_dir2)
 			@img_count = Dir.entries(pic_path).count - 3
@@ -100,24 +85,12 @@ class PlantController < ApplicationController
 				src_path = "/"+@all_pic_path_arr[rand_num]
 				tmp_arr << src_path
 				en_name = /\/.*\/.*\/(?<name>.*)\/.*/.match(src_path)[:name]
-				puts "------en_name-----"
-				puts en_name
 				cn_name = @name_map.names[en_name]
-				puts "------cn_name-----"
-				puts cn_name
-
 				tmp_arr << cn_name
 
 				@all_img_arr << tmp_arr
 			end
 
-			puts "------@all_img_arr---------"
-			for i in 0..5 do
-			   puts @all_img_arr[i][0]
-			   puts "--and ---"
-				 puts @all_img_arr[i][1]
-			end
-			puts "---------------------------"
 		end
 
 

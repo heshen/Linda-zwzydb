@@ -7,7 +7,6 @@ class Zhong
   field :cname, type: String
   field :ldname, type: String
   field :aliases, type: Array, default: []        #['别名1','别名2',...]
-  field :chandi,  type: Array, default: []        #['黑龙江','吉林',...]
   field :xingtai, type: String
   field :huaqi, type: String
   field :xingzhuang,  type: String
