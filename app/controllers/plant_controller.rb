@@ -93,7 +93,6 @@ class PlantController < ApplicationController
 
 		end
 
-
 	end
 
 end
