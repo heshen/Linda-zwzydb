@@ -14,6 +14,7 @@ gem 'bson_ext'
 gem 'mongo'
 gem 'activeresource'
 
+gem 'thin'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
