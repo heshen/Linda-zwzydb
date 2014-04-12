@@ -1,192 +1,345 @@
-<!DOCTYPE html>
-<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
-<head>
-    <!--网页元数据-->
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta name="Description" content="中国园林植物资源应用数据库及网络咨询服务系统---园林植物模块首页">
-    <meta name="Keywords" content="园林植物，园林应用，园林植物资源数据库，咨询服务">
-    <meta name="Author" content="Dong Zheng">
-    <meta name="viewport" content="initial-scale=1.0,width=device-width maximum-scale=1.0, user-scalable=0">
-    <meta name="format-detection" content="telephone=no">
-    <!--引入CSS框架-->
-    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="/css/bootstrap-theme.css" rel="stylesheet" media="screen">
-    <link href="/css/site-specific.css" rel="stylesheet" media="screen">
-    <link href="/css/site-plants-specific.css" rel="stylesheet" media="screen">
-  <link type="text/css" rel="stylesheet" href="multiselect/absearch.css">
-    <!--引入js脚本-->
-    <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.js"></script>
+<% #plant_querying PAGE  %>
 
-    <!--引入multi-select-menu css/js resources-->
-    <!--<link type="text/css" rel="stylesheet" href="multiselect/absearch.css">-->
-    <script type="text/javascript" src="multiselect/menuscript.js"></script>
+<% #Export localized css/js for this view to the Layout  %>
+<% content_for :style_links do %>
+    <%= stylesheet_link_tag "plant/plant_querying.css", media: "all", "data-turbolinks-track" => true %>
+<% end %>
+<% content_for :script_links do %>
+    <%= javascript_include_tag "plant/plant_querying.js", "data-turbolinks-track" => true %>
+<% end %>
 
-  <title>中国园林植物资源应用数据库</title>
-</head>
-<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="navbar-header" >
-                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a href="/" class="navbar-brand">首页</a>
-                    </div>
-                    <nav class="nav  navbar-collapse" role="navigation" >
-                        <ul class="nav navbar-nav">
+<article class="container">
+  <section id="id-multi-select" class="row row-section" style="margin-top: -400px;">
+    <div class="col-md-10 col-md-offset-1 panel-styles" style="height:280px;margin-bottom: 40px">
+      <div id="main">
+        <div class="area pro-store">
+          <div class="attr-group">
+            <div id="J_ArrtSelected" class="attr-selected has-selected">
+              <div
+              class="attr-selected-cnt">
+                <div class="attr-hd" style="line-height: 30px;">您已选择：</div>
+                <h1>
+                  <div
+                  class="has-selected-hd mt-7 fl"></div>
+                </h1>
+                <ul class="attr-list">
+                  <li class="mt-7"></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="attr-contant">
+              <div class="attr-prop" id="category_attr_value">
+                <div class="attr clearfix buy-hot select1 ">
+                  <div class="attr-hd">形态分类</div>
+                  <div
+                  class="attr-bd">
+                    <ul class="attr-list clearfix attr-ul" attrid="2966" height="auto">
+                      <li><strong><a title="乔木" class="attr-item " href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text"><span class="normal">乔木</span><span class="qstr" style="display: none">{xingtai: "~乔木~"}</span></span>
+                        </div>
+                      </a></strong></li>
+                      <li><strong><a title="灌木" class="attr-item" href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text"><span class="normal">灌木</span><span class="qstr" style="display: none">{xingtai: "~灌木~"}</span></span>
+                        </div>
+                      </a></strong></li>
+                      <li><strong><a title="藤本" class="attr-item" href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text"><span class="normal">藤本</span><span class="qstr" style="display: none">{xingtai: "~藤本~"}</span></span>
+                        </div>
+                      </a></strong></li>
+                      <li><strong><a title="宿根" class="attr-item" href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text"><span class="normal">宿根</span><span class="qstr" style="display: none">{xingtai: "~宿根~"}</span></span>
+                        </div>
+                      </a></strong></li>
+                      <li><strong><a title="水生" class="attr-item" href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text"><span class="normal">水生</span><span class="qstr" style="display: none">{xingtai: "~水生~"}</span></span>
+                        </div>
+                      </a></strong></li>
+                      <li><strong><a title="草本" class="attr-item" href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner
+          clearfix"><span class="attr-item-text"><span
+                        class="normal">草本</span><span class="qstr" style="display: none">{xingtai: "~草本~"}</span></span>
+                        </div>
+                      </a></strong></li>
+                      <li><strong><a title="草坪" class="attr-item"
+                                     href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text"><span class="normal">草坪</span><span class="qstr" style="display: none">{xingtai: "~草坪~"}</span></span>
+                        </div>
+                      </a></strong></li>
+
+                      <li><strong><a title="地被" class="attr-item" href="javascript:void(0)" rel="nofollow">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text"><span class="normal">地被</span><span class="qstr" style="display: none">{xingtai: "~地被~"}</span></span>
+                        </div>
+                      </a></strong></li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="advanced_option" class="attr clearfix advanced-option">
+                  <div
+                  class="option-cate">生态习性
+                  </div>
+                  <div>
+                    <ul class="option-ul clearfix">
+                      <li class="option-li select21"><span class="option-t">光照强度<b></b></span>
+
+                        <div class="option-wrap">
+                          <ul>
                             <li>
-                              <%=link_to '园林植物','/plant/map_querying'  %>
-                              <!--<a href="#">园林植物</a>-->
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">全光</a><span class="qstr" style="display: none">{"shengtai.light":"~全光~"}</span></span>
                             </li>
-                            <li><a href="#">植物景观</a></li>
-                            <li><a href="#">景观设计施工养护</a></li>
-                            <li><a href="#">园林植物百科全书</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">关于</a></li>
-                        </ul>
-                    </nav>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">全光50%</a><span class="qstr" style="display: none">{"shengtai.light":"~全光50%~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">全光30%</a><span class="qstr" style="display: none">{"shengtai.light":"~全光30%~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">散射光</a><span class="qstr" style="display: none">{"shengtai.light":"~散射光~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">弱光</a><span class="qstr" style="display: none">{"shengtai.light":"~弱光~"}</span></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="option-li select22"><span class="option-t">空气湿度<b></b></span>
+
+                        <div class="option-wrap">
+                          <ul>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">高湿(100%~85%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~高湿~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">中等湿度(85%~60%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~中等湿度~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">较干燥(60%~30%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~较干燥~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">干燥(30%~0%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~干燥~"}</span></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="option-li select23"><span class="option-t">土壤水分<b></b></span>
+
+                        <div class="option-wrap">
+                          <ul>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐涝</a><span class="qstr" style="display: none">{"shengtai.moisture":"~耐涝~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">中等水分</a><span class="qstr" style="display: none">{"shengtai.moisture":"~中等~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐干旱</a><span class="qstr" style="display: none">{"shengtai.moisture":"~耐干旱~"}</span></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="option-li select24"><span class="option-t">温度适应性<b></b></span>
+
+                        <div class="option-wrap">
+                          <ul>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐寒</a><span class="qstr" style="display: none">{"shengtai.temperature":"~耐寒~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐热</a><span class="qstr" style="display: none">{"shengtai.temperature":"~耐热~"}</span></span>
+                            </li>
+                            <li>
+                              <span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">一般</a><span class="qstr" style="display: none">{"shengtai.temperature":"~一般~"}</span></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+
+                <div class="attr clearfix select3">
+                  <div class="attr-hd">形状</div>
+                  <div class="attr-bd">
+
+                    <ul class="attr-list clearfix attr-ul" attrid="">
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">纺锤形</span><span class="qstr" style="display: none">{"xingzhuang": "~纺锤形~"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">伞形</span><span class="qstr" style="display: none">{"xingzhuang": "~伞形~"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">馒头形</span><span class="qstr" style="display: none">{"xingzhuang": "~馒头形~"}</span>
+                        </div>
+                      </a></li>
+
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">卵形</span><span class="qstr" style="display: none">{"xingzhuang": "~卵形~"}</span>
+                        </div>
+                      </a></li>
+
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">倒卵形</span><span class="qstr" style="display: none">{"xingzhuang": "~倒卵形~" }</span>
+                        </div>
+                      </a></li>
+
+
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">圆形</span><span class="qstr" style="display: none">{"xingzhuang":"~圆形~"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">金字塔形</span><span class="qstr" style="display: none">{"xingzhuang": "~金字塔形~"}</span>
+                        </div>
+                      </a></li>
+
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">直立形</span><span class="qstr" style="display: none">{"xingzhuang": "~直立形~"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">平卧形</span><span class="qstr" style="display: none">{"xingzhuang": "~平卧形~"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">匍匐形</span><span class="qstr" style="display: none">{"xingzhuang": "~匍匐形~"}</span>
+                        </div>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="attr clearfix select4">
+                  <div
+                  class="attr-hd">观赏部位
+                  </div>
+                  <div class="attr-bd">
+                    <div class="attr-bar"></div>
+                    <ul class="attr-list clearfix attr-ul" attrid="">
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">观花</span><span class="qstr" style="display: none">{"guanshang": "[观花]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">观叶</span><span class="qstr" style="display: none">{"guanshang": "[观叶]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">观果</span><span class="qstr" style="display: none">{"guanshang": "[观果]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">观枝</span><span class="qstr" style="display: none">{"guanshang": "[观枝]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">观皮</span><span class="qstr" style="display: none">{"guanshang": "[观皮]"}</span>
+                        </div>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="attr clearfix select5">
+                  <div class="attr-hd">功能性状</div>
+                  <div class="attr-bd">
+                    <div class="attr-bar"></div>
+                    <ul class="attr-list clearfix attr-ul" attrid="">
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix"><span class="attr-item-text normal">耐阴</span>
+                          <span class="qstr" style="display: none">{"gongneng": "[耐阴]"}</span>
+                        </div>
+                      </a></li>
+
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">耐寒</span><span class="qstr" style="display: none">{"gongneng":
+            "[耐寒]"}</span></div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">耐旱</span><span class="qstr" style="display: none">{"gongneng": "[耐旱]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">耐水湿</span><span class="qstr" style="display: none">{"gongneng": "[耐水湿]"}</span>
+                        </div>
+                      </a></li>
+
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">耐盐碱</span><span class="qstr" style="display: none">{"gongneng": "[耐盐碱]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">耐修剪</span><span class="qstr" style="display: none">{"gongneng": "[耐修剪]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">抗风</span><span class="qstr" style="display: none">{"gongneng": "[抗风]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">抗病虫害</span><span class="qstr" style="display: none">{"gongneng": "[抗病],[抗虫]"}</span>
+                        </div>
+                      </a></li>
+                      <li><a title="" class="attr-item" style="margin-right: 0" href="javascript:void(0)" attrid="">
+                        <div class="attr-item-inner clearfix">
+                          <span class="attr-item-text normal">抗污染</span><span class="qstr" style="display: none">{"gongneng": "[抗污染]"}</span>
+                        </div>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </nav>
-
-    <header id="banner" class="banner no-radius">
-        <div class="container text-center">
-        </div>
-    </header>
-    <div class="shadow" style="-webkit-animation: anim_top2bottom 2s ease-out 0 1 forwards;"></div>
-
-
-    <article class="container">
-      <section id="id-multi-select" class="row row-section" style="margin-top: -400px;">
-        <div class="col-md-10 col-md-offset-1 panel-styles" style="height:280px;margin-bottom: 40px" >
-
-          <div id="main"><div class="area pro-store">
-            <div class="attr-group"><div id="J_ArrtSelected" class="attr-selected has-selected"><div
-            class="attr-selected-cnt"><div class="attr-hd" style="line-height: 30px;">您已选择：</div><h1><div
-            class="has-selected-hd mt-7 fl"></div></h1>
-              <ul class="attr-list">
-                <li class="mt-7"></li>
-              </ul>
-
-
-
-            </div></div><div class="attr-contant"> <div class="attr-prop" id="category_attr_value"><div class="attr clearfix buy-hot select1 "><div class="attr-hd">形态分类</div><div
-            class="attr-bd"><ul class="attr-list clearfix attr-ul" attrid="2966" height="auto"><li><strong><a title="乔木" class="attr-item " href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner clearfix"><span class="attr-item-text"><span class="normal">乔木</span><span class="qstr" style="display: none">{xingtai: "~乔木~"}</span></span></div></a></strong></li><li><strong><a title="灌木" class="attr-item" href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner clearfix"><span class="attr-item-text"><span class="normal">灌木</span><span class="qstr" style="display: none">{xingtai: "~灌木~"}</span></span></div></a></strong></li><li><strong><a title="藤本" class="attr-item" href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner clearfix"><span class="attr-item-text"><span class="normal">藤本</span><span class="qstr" style="display: none">{xingtai: "~藤本~"}</span></span></div></a></strong></li><li><strong><a title="宿根" class="attr-item" href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner clearfix"><span class="attr-item-text"><span class="normal">宿根</span><span class="qstr" style="display: none">{xingtai: "~宿根~"}</span></span></div></a></strong></li>
-              <li><strong><a title="水生" class="attr-item" href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner clearfix"><span class="attr-item-text"><span class="normal">水生</span><span class="qstr" style="display: none">{xingtai: "~水生~"}</span></span></div></a></strong></li>
-              <li><strong><a title="草本" class="attr-item" href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner
-              clearfix"><span class="attr-item-text"><span
-              class="normal">草本</span><span class="qstr" style="display: none">{xingtai: "~草本~"}</span></span></div></a></strong></li><li><strong><a title="草坪" class="attr-item"
-                                                                                     href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner clearfix"><span class="attr-item-text"><span class="normal">草坪</span><span class="qstr" style="display: none">{xingtai: "~草坪~"}</span></span></div></a></strong></li>
-
-              <li><strong><a title="地被" class="attr-item" href="javascript:void(0)" rel="nofollow"><div class="attr-item-inner clearfix"><span class="attr-item-text"><span class="normal">地被</span><span class="qstr" style="display: none">{xingtai: "~地被~"}</span></span></div></a></strong></li>
-            </ul></div></div><div id="advanced_option" class="attr clearfix advanced-option"><div
-            class="option-cate">生态习性</div><div><ul class="option-ul clearfix"><li class="option-li select21"><span class="option-t">光照强度<b></b></span><div class="option-wrap"><ul><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">全光</a><span class="qstr" style="display: none">{"shengtai.light":"~全光~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">全光50%</a><span class="qstr" style="display: none">{"shengtai.light":"~全光50%~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">全光30%</a><span class="qstr" style="display: none">{"shengtai.light":"~全光30%~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">散射光</a><span class="qstr" style="display: none">{"shengtai.light":"~散射光~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">弱光</a><span class="qstr" style="display: none">{"shengtai.light":"~弱光~"}</span></span></li></ul></div></li><li class="option-li select22"><span class="option-t">空气湿度<b></b></span><div class="option-wrap"><ul><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">高湿(100%~85%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~高湿~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">中等湿度(85%~60%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~中等湿度~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">较干燥(60%~30%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~较干燥~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">干燥(30%~0%)</a><span class="qstr" style="display: none">{"shengtai.huminity":"~干燥~"}</span></span></li></ul></div></li><li class="option-li select23"><span class="option-t">土壤水分<b></b></span><div class="option-wrap"><ul><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐涝</a><span class="qstr" style="display: none">{"shengtai.moisture":"~耐涝~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">中等水分</a><span class="qstr" style="display: none">{"shengtai.moisture":"~中等~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐干旱</a><span class="qstr" style="display: none">{"shengtai.moisture":"~耐干旱~"}</span></span></li></ul></div></li><li class="option-li select24"><span class="option-t">温度适应性<b></b></span><div class="option-wrap"><ul><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐寒</a><span class="qstr" style="display: none">{"shengtai.temperature":"~耐寒~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">耐热</a><span class="qstr" style="display: none">{"shengtai.temperature":"~耐热~"}</span></span></li><li><span><a title="" class="attr-item normal" href="javascript:void(0)" attrid="">一般</a><span class="qstr" style="display: none">{"shengtai.temperature":"~一般~"}</span></span></li></ul></div></li></ul></div></div>
-
-              <div class="attr clearfix select3">
-                <div class="attr-hd">形状</div>
-                <div class="attr-bd">
-
-              <ul class="attr-list clearfix attr-ul" attrid=""><li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">纺锤形</span><span class="qstr" style="display: none">{"xingzhuang": "~纺锤形~"}</span></div></a></li><li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">伞形</span><span class="qstr" style="display: none">{"xingzhuang": "~伞形~"}</span></div></a></li><li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">馒头形</span><span class="qstr" style="display: none">{"xingzhuang": "~馒头形~"}</span></div></a></li>
-
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">卵形</span><span class="qstr" style="display: none">{"xingzhuang": "~卵形~"}</span></div></a></li>
-
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">倒卵形</span><span class="qstr" style="display: none">{"xingzhuang": "~倒卵形~" }</span></div></a></li>
-
-
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">圆形</span><span class="qstr" style="display: none">{"xingzhuang":"~圆形~"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">金字塔形</span><span class="qstr" style="display: none">{"xingzhuang": "~金字塔形~"}</span></div></a></li>
-
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">直立形</span><span class="qstr" style="display: none">{"xingzhuang": "~直立形~"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">平卧形</span><span class="qstr" style="display: none">{"xingzhuang": "~平卧形~"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">匍匐形</span><span class="qstr" style="display: none">{"xingzhuang": "~匍匐形~"}</span></div></a></li></ul></div></div><div class="attr clearfix select4"> <div
-              class="attr-hd">观赏部位</div><div class="attr-bd"><div class="attr-bar"></div><ul class="attr-list clearfix attr-ul" attrid=""><li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">观花</span><span class="qstr" style="display: none">{"guanshang": "[观花]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">观叶</span><span class="qstr" style="display: none">{"guanshang": "[观叶]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">观果</span><span class="qstr" style="display: none">{"guanshang": "[观果]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">观枝</span><span class="qstr" style="display: none">{"guanshang": "[观枝]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">观皮</span><span class="qstr" style="display: none">{"guanshang": "[观皮]"}</span></div></a></li></ul></div></div><div class="attr clearfix select5"><div class="attr-hd">功能性状</div><div class="attr-bd"><div class="attr-bar"></div><ul class="attr-list clearfix attr-ul" attrid=""><li><a title="" class="attr-item"  href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">耐阴</span>
-              <span class="qstr" style="display: none">{"gongneng": "[耐阴]"}</span>
-            </div></a></li>
-
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">耐寒</span><span class="qstr" style="display: none">{"gongneng":
-                "[耐寒]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">耐旱</span><span class="qstr" style="display: none">{"gongneng": "[耐旱]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">耐水湿</span><span class="qstr" style="display: none">{"gongneng": "[耐水湿]"}</span></div></a></li>
-
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">耐盐碱</span><span class="qstr" style="display: none">{"gongneng": "[耐盐碱]"}</span></div></a></li><li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">耐修剪</span><span class="qstr" style="display: none">{"gongneng": "[耐修剪]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">抗风</span><span class="qstr" style="display: none">{"gongneng": "[抗风]"}</span></div></a></li>
-              <li><a title="" class="attr-item" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">抗病虫害</span><span class="qstr" style="display: none">{"gongneng": "[抗病],[抗虫]"}</span></div></a></li>
-              <li><a title="" class="attr-item" style="margin-right: 0" href="javascript:void(0)" attrid=""><div class="attr-item-inner clearfix"><span class="attr-item-text normal">抗污染</span><span class="qstr" style="display: none">{"gongneng": "[抗污染]"}</span></div></a></li>
-            </ul></div></div></div></div></div>
-
-          </div>
           </div>
 
-          <div class="area pro-store"><button type="button" id="btn_query" style="margin-left: 750px;display: none">查
-            询</button></div>
-
-	     </section>
-
-      <section id="id-pics-list" class="row row-section">
-        <div class="col-md-12 panel-styles" style="height:300px;margin-bottom:80px">
-
-          <div id="prd_list" class="products-list mt-20">
-	          <ul class="list-view-enlarge clearfix" id="cpc" style="padding-left:30px;width:1170px" >
-	            <div id="info_no_pic" style="display: inline">没有图片，请选择条件进行筛选/查询。</div>
-				<!--插入<li> pics-->
-
-	          </ul>
-
-          </div>
         </div>
-      </section>
+      </div>
+      <div class="area pro-store">
+        <button type="button" id="btn_query" style="margin-left: 750px;display: none">查
+          询
+        </button>
+      </div>
+  </section>
 
-    </article>
+  <section id="id-pics-list" class="row row-section">
+    <div class="col-md-12 panel-styles" style="height:300px;margin-bottom:80px">
 
-
-
-
-
-
-
-
-
-
-
-    <article class="container">
-        <section id="id-section-Map" class="row row-section" style="margin-top: 250px;">
-            <div class="col-md-10 col-md-offset-1 panel-styles" style="height: 400px;">
-                <div class="col-md-7 put-left-corners" style="height: 100%;">
-                    <div id="map" class="map-frame-bg" >
-                        <iframe src="map/map.htm" width="569px" height="400px" style="border:0;"></iframe>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                  @mynewtest = <%= @mynewtest %>    <br/>
-
-                  <%= link_to '/plant/list_plant_querying', :id => 'myalink', :remote => true do %>
-                      <button id="mybutton1" type="button">Click Me!</button>
-                  <% end %>
-                  <button id="mybutton2" type="button">Send data via ajax</button>
-
-                </div>
-            </div>
-        </section>
-    </article>
-
-
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-</body>
-</html>
+      <div id="prd_list" class="products-list mt-20">
+        <ul class="list-view-enlarge clearfix" id="cpc" style="padding-left:30px;width:1170px">
+          <div id="info_no_pic" style="display: inline">没有图片，请选择条件进行筛选/查询。</div>
+          <!--插入<li> pics-->
+        </ul>
+      </div>
+    </div>
+  </section>
+</article>

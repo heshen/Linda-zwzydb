@@ -1,0 +1,340 @@
+@charset "utf-8";
+//----------------Base对象样式----------------
+ol, ul {
+  list-style: none;
+}
+body .hide, body .none {
+  display: none;
+}
+
+//----------------App对象样式----------------
+//菜单整体和头部
+.category-content {
+  position: relative;
+  width: 203px;
+  float: left;
+  z-index: 113;
+  .all-goods {   //头部
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    text-align: center;
+    font: 16px/36px "Microsoft YaHei";
+    background: #d2364c;
+//    background: url("../map/map-bg.jpg");
+//    background-size: cover;
+    em {
+      font: 12px/36px "Microsoft YaHei";
+    }
+  }
+}
+
+//菜单正文总背景框架
+.category {
+  position: absolute;
+  top: 36px;
+  z-index: 113;
+  width: 100%;
+//  width: 199px;
+  height : 385px;
+  border: 1px solid #dadad9;
+  border-top: none;
+  background: #fefefe;
+//  background: #ffff00;
+//  box-shadow: 2px 2px 3px #dedede;
+}
+
+//菜单正文列表
+.category-list {
+   li {
+     height: 77px;
+     width: 200px;
+     border: 1px solid #fff;
+     border-right: none;
+     margin-left: -41px;
+     z-index: 114;
+   }
+}
+
+//----------具体的列表块菜单项----------
+//菜单块
+.category-info {
+     padding: 0 0 0 12px;
+     width: 201px;
+     position: relative;
+     height: 100%;
+     width: 100%;
+//    _overflow: hidden;
+    .category-name {  //<h3>
+      overflow: hidden;
+      position: relative;
+      margin: 0px;
+      padding-top: 16px;
+      i {
+        position: absolute;
+        top: 13px;
+        width: 25px;
+        height: 25px;
+        -top: 6px;
+      }
+      .ml-22 {  //<a>
+        margin-left: 34px;
+      }
+    }
+    .b-category-name {   //1~2个大类名
+      padding-top: 6px;
+      font: 600 16px/30px "宋体";
+      line-height: 32px;
+    }
+    .c-category-list {   //4个小类名
+       font: 400 12px/24px "宋体";
+       width: 160px;
+       margin-right: 1px;
+       padding-bottom: 33px;
+       border-bottom: 1px solid #f4f4f4;
+       zoom: 1;
+      a {
+        margin-right: 3px;
+        color: #626262;
+      }
+    }
+}
+
+//菜单块内的右箭头
+.category-content .category-info em {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  width: 13px;
+  height: 13px;
+  font: 12px/18px "宋体";
+  color: #9b9b9b;
+}
+
+.list-nz {
+     i {
+//       background-position: 0 -200px;
+     }
+  }
+
+//----------------复用样式块----------------
+.limit-24 {
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//------------动态伪类层样式----------------
+.category-content .category-list a:hover {
+  text-decoration: none;
+  color: #D2364C;
+}
+
+.relative {
+  position: relative;
+}
+
+//----------------js施加样式----------------
+//appliance js_toggle relative first
+
+//================弹出菜单部分===============================
+//------------
+.category-content .menu-item {
+  position: absolute;
+  z-index: 11;
+  left: 190px;
+  width: 500px;
+  padding: 2px 0 10px 25px;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 2px 3px #ccc;
+//  border-top: 1px solid #bbb\9;
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=135,strength=4)";
+  *filter: "progid :DXImageTransform.Microsoft.Shadow(color=#dddddd, direction=135,strength=4)"; }
+
+.category-content .menu-item {
+  left: 193px;
+}
+
+.category-content .menu-in {
+  display: none;
+  display: block;
+}
+
+
+.category-content .menu-item .area-in {
+//  *z-index: 9999;
+}
+.category-content .menu-item .area-in {
+  position: relative;
+  z-index: 1;
+}
+
+.category-content .menu-item .area-bg {
+  padding: 10px 0 10px 0px;
+}
+
+.sort-side .dl-sort {
+  float: left;
+//  width: 31%;
+}
+.sort-side .dl-sort {
+  *width: 31%;
+  *margin-right: 2%;
+}
+.brand-side .dl-sort {
+  overflow: hidden;
+  height: 70px;
+}
+
+.sort-side dt {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #db3e54;
+}
+
+a {
+  color: #666;
+}
+
+//----------------hover样式----------------
+.category-content .category .hover {
+  box-shadow: 0px 2px 3px #ccc;
+  z-index: 999;
+  border: 2px solid #db3e54;
+  border-right: 2px solid #ffffff;
+}
+.category-content .hover .category-info {
+  border: none;
+  text-decoration: none;
+  background: #fff;
+}
+
+.category-content .menu-item .top {
+  top: -2px;
+}
+
+.category-content .category-list li.hover .category-info {
+  z-index: 999;
+}
+
+.category-list li.hover .menu-in {
+  border: 2px solid #d83e54;
+  /*border-width: 6px;*/
+  /*border-color: #000000;*/
+  /*border-style: dashed;*/
+}
+//----------------弹出菜单内的布局和样式----------------
+.dl-sort {  //一个独立完整的列表块
+  width: 155px;
+  height: 170px;
+  margin: 0px;
+  padding: -10px 0px 5px 35px;
+//  margin: 0 10px 0 0px;
+//  border: 1px solid #282828;
+}
+.dl-sort2 {  //一个独立完整的列表块
+  width: 155px;
+  height: 270px;
+  margin: 0px;
+  padding: -10px 0px 5px 35px;
+  //  margin: 0 10px 0 0px;
+  //  border: 1px solid #282828;
+}
+
+.borders-11 {
+  border: none;
+  border-right: 1px solid #e4b9c0;
+  border-bottom: 1px solid #e4b9c0;
+}
+.borders-12 {
+  border: none;
+  border-bottom: 1px solid #e4b9c0;
+}
+.borders-21 {
+  border: none;
+  border-right: 1px solid #e4b9c0;
+}
+
+dt {
+  margin-top: -100px;
+  padding-top: 0px;
+}
+
+.dl-sort dd, .dl-sort2 dd {  //列表数据项
+  span {
+    font-size: 4px;
+    margin: 0 0 0 10px;
+  }
+  div > span {
+    margin-left: 40px;
+  }
+  div > span:first-child{
+//    margin-left: 40px;
+  }
+  .subGroup {
+    width: 150px;
+  }
+}
+
+.dl-sort dt span,.dl-sort2 dt span { //列表标题项
+  font-size: 14px;
+}
+
+.dl-sort input, .dl-sort2 input {
+  //   padding: 4px;
+  margin: 5px;
+}
+
+
+//----------------map地图row样式----------------
+//左侧上下2个圆角
+@mixin put-left-corners{
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+
+  -moz-border-top-left-radius: 6px;
+  -moz-border-bottom-left-radius: 6px;
+
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+@mixin put-top-corners{
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+
+  -moz-border-top-left-radius: 6px;
+  -moz-border-bottom-right-radius: 6px;
+
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+@mixin put-inner-shadows {
+  -webkit-box-shadow: -2px -2px 8px 3px rgba(0, 0, 0, 0.24) inset;
+  -moz-box-shadow: -2px -2px 8px 3px rgba(0, 0, 0, 0.24) inset;
+  box-shadow: -2px -2px 8px 3px rgba(0, 0, 0, 0.24) inset;
+}
+
+.map-frame-bg {
+  height: 100%;
+  width: 569px;
+  margin-left: -15px;
+  background: url("../images/map-bg.jpg");
+  background-size: cover;
+
+  @include put-left-corners;
+  @include put-inner-shadows;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}

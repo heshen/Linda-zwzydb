@@ -1,0 +1,22 @@
+<% #map_querying PAGE %>
+
+<% #Export localized css/js for this view to the Layout %>
+<% content_for :style_links do %>
+<% end %>
+<% content_for :script_links do %>
+<% end %>
+
+<article class="container">
+    <section id="id-section-Map" class="row row-section" style="margin-top: -400px;">
+        <div class="col-md-10 col-md-offset-1 panel-styles" style="height: 400px;">
+            <div class="col-md-7 put-left-corners" style="height: 100%;">
+                <div id="map" class="map-frame-bg" >
+                    <iframe src="/plant/map/map.htm" width="569px" height="400px" style="border:0;"></iframe>
+                </div>
+            </div>
+            <div class="col-md-5">
+                map_querying
+            </div>
+        </div>
+    </section>
+</article>
