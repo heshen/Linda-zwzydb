@@ -2,8 +2,8 @@
 LindaZwzydb::Application.routes.draw do
   get "plant/plant_show"
   get "plant/list_plant_querying"
-  get "plant/map_querying"
   get "plant/plant_querying"
+  get "plant/plant_map"
 
   #match 'plant/plant_querying', to: 'plant#plant_querying', via: [:get, :post]
   #get "plant/index"

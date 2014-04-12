@@ -1,0 +1,140 @@
+
+#plant-toppart {
+  .col-md-7 {
+    padding-left: 0px;
+  }
+  .field_row {
+    margin: 6px 6px 6px 2px;
+  }
+}
+
+#plant-bottompart {
+   .field_row {
+     margin: 12px 12px 8px 20px;
+   }
+}
+
+
+
+.field_label {
+  font-weight: bold;
+  font-family:Microsoft YaHei;
+  font-size: 14px;
+  margin-right: 6px;
+}
+.field_content {
+  font-size: 14px;
+  font-family:Microsoft YaHei;
+}
+
+
+
+#plant-title {
+  margin: 40px 2px 25px 2px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family:DFKai-SB;
+  text-align: center;
+  #bar-line {
+    height: 1px;
+    width: auto;
+    background-color: #d8d8d8;
+  }
+}
+
+
+#id-details-panel{
+//  margin-bottom: 10px;
+  padding-bottom: 25px;
+}
+
+#id-show-right-panel {
+  border: 5px solid #E38D13;
+  margin-top: 14px;
+  padding: 15px 15px;
+
+  .panel-header {
+    background-color: #3C85C4;
+    font-weight: bold;
+    color: #ffffff;
+    height: 35px;
+    border-radius: 2px;
+
+    #header-text {
+      display: block;
+      float: left;
+      margin: 2px 6px;
+      padding: 4px;
+      font-size: 18px;
+    }
+}
+  .panel-body span {
+    display: block;
+    float: left;
+    background-color: #c0a16b;
+    margin: 5px 6px;
+    border-radius: 2px;
+    padding: 4px;
+    font-size: 10px;
+  }
+}
+
+.panel-title{
+  font-weight: bold;
+  color: #ffffff;
+  widows: 255px;
+}
+.panel-body{
+  padding: 15px 5px 3px 5px;
+}
+
+
+.disp-pic .pics-left-col{
+  padding-left: 10px;
+  padding-right: 2px;
+}
+.disp-pic .pics-right-col{
+  padding-left: 3px;
+  padding-right: 10px;
+}
+
+.disp-pic a {
+   margin-bottom: 7px;
+}
+
+.quhua_list {
+  margin-bottom: 0px;
+  .panel-heading {
+     font-size: 12px;
+     font-weight: bold;
+     padding-left: 5px;
+  }
+  .panel-body{
+     padding-top: 3px;
+      ul {
+        padding-left: 5px;
+        font-size: 13px;
+        margin-left: 0px;
+       }
+  }
+}
+.attr-item {
+  padding: 0px;
+  margin: 0px;
+  a {
+    color: #000000;
+  }
+}
+
+.panel-body {
+  a {
+    color: #000000;
+  }
+  a:hover, a:active {
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+    color: #C10001;
+  }
+}
+

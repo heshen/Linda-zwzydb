@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--网页元数据-->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="description" content="中国园林植物资源应用数据库及网络咨询服务系统">
+  <meta name="keywords" content="园林植物，园林应用，园林植物资源数据库，咨询服务">
+  <meta name="author" content="Dong Zheng">
+  <meta name="viewport" content="initial-scale=1.0,width=device-width maximum-scale=1.0, user-scalable=0">
+  <meta name="format-detection" content="telephone=no">
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+  <!--view css-->
+  <%= yield :style_links  %>
+  <!--view js-->
+  <%= yield :script_links %>
+
+  <title>园林植物资源应用数据库</title>
+</head>
+<body>
+	<!--Layout part-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-10 col-md-offset-1">
+	        <div class="navbar-header" >
+	          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a href="/" class="navbar-brand">首页</a>
+	        </div>
+	        <nav class="nav  navbar-collapse" role="navigation"  >
+	          <ul class="nav navbar-nav">
+	            <li>
+	              <%=link_to '园林植物','/plant/plant_map' %>
+	              <!--<a href="plant_querying.html.erb">园林植物</a>-->
+	            </li>
+	            <li>
+	              <%=link_to '景观植物', '/plant/plant_querying'  %>
+	              <!--<a href="#">植物景观</a>-->
+	            </li>
+	            <li><a href="#">景观设计施工养护</a></li>
+	            <li><a href="#">园林植物百科全书</a></li>
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	            <li><a href="#">关于</a></li>
+	          </ul>
+	        </nav>
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+	<header id="banner" class="banner no-radius">
+	  <div class="container text-center">
+	    <%= yield :header_contents  %>
+	  </div>
+	</header>
+	<div class="shadow" style=" -webkit-animation: anim_top2bottom 2s ease-out 0 1 forwards;"></div>
+	<!--View part-->
+	<%= yield %>
+
+	<!--foot bar on the bottom-->
+	<nav class="navbar navbar-default " role="navigation">
+	  <h5>东北林业大学   园林学院</h5>
+	</nav>
+
+</body>
+
+</html>
