@@ -163,7 +163,7 @@ $(function(){
          for (var i=0; i < nLength; i++) {
              var my_new_pic_node = pic_node_template.clone();
              var str_cname = data.data_s[i].cname;
-             var str_pic_path = "img/" + data.data_s[i].pics + "1.jpg";
+             var str_pic_path = "/pic-store/img/" + data.data_s[i].pics + "1.jpg";
 
              my_new_pic_node.find('a').attr('href','/plant/plant_show/'+str_cname+"+"+data.data_s[i].pics);
              my_new_pic_node.find('a').attr('title',str_cname)

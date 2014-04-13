@@ -67,11 +67,11 @@ class PlantController < ApplicationController
 
 			@guanshang = @zhong[0].guanshang.join(",")
 
-			pic_path = File.join("public","plant","img",@pic_dir1,@pic_dir2)
+			pic_path = File.join("public","pic-store","img",@pic_dir1,@pic_dir2)
 			@img_count = Dir.entries(pic_path).count - 3
 
 			Dir.chdir("public")    #临时从/Linda-zwzydb根目录，进入到public子目录；用于生成相对于/plant为根目录的图片asset路径；
-			all_pic_dir_pattern = File.join("plant","img","**","*.jpg")
+			all_pic_dir_pattern = File.join("pic-store","img","**","*.jpg")
 			@all_pic_path_arr = Dir.glob(all_pic_dir_pattern)
 			Dir.chdir("../")       #返回/Linda-zwzydb根目录
 

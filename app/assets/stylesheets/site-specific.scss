@@ -3,20 +3,6 @@
  *王俊峰的css
  */
 
-.experts-info {
-  width: 690px;
-  height: 610px;
-  margin: 5px 0 0 -15px;
-  border: none;
-  border-radius: 6px;
-
-//  -webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-//  -moz-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-//  -ms-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-//  -o-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-//  box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-//  box-shadow: 0px 1px 8px ;
-}
 
 #id_login {
   margin-top: 30px;
@@ -96,7 +82,7 @@
    line-height: 18pt;
 }
  article .bkimg {
-  background-image: image-url("background.jpg");
+  background-image: url("/img/layouts/plant/background.jpg");
   background-size: contain;
 }
 .shadow {
@@ -149,7 +135,7 @@
 
 article header {
   height: 300px;
-  background:  #e5e5e5  image-url("bg1.png");
+  background:  #e5e5e5  url("/img/layouts/plant/header-bg.png");
   background-size: contain;
 }
 
@@ -161,7 +147,7 @@ article {
 .banner {
   position: relative;
   margin-top: 50px;
-  background: image-url("bg1.png");
+  background: url("/img/layouts/plant/header-bg.png");
   background-size: cover;
 //  background-size: contain;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg1.png', sizingMethod='scale');
@@ -215,7 +201,7 @@ a:active:not(.btn) {
 }
 
 body {
-  background:  #e5e5e5 image-url("background.jpg");
+  background:  #e5e5e5 url("/img/layouts/plant/background.jpg");
 //  background-size: contain;
   overflow-x: hidden;
   -webkit-user-select: text;

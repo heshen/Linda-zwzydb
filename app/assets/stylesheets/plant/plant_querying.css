@@ -392,7 +392,7 @@ body .show { display:block; }
 /* 整合 */
 .red{color: #00699E;}
 .green{color:green}
-.new-activity .hot, .h-comment i, .store-yl, .store-type i ,.crumb-delete,.crumb-search-btn,.attr-item i,.attr-cate .attr-hd,.attr-bar .attr-choose i,.more-drop-arrow,.more-expand-arrow,.filter-area,.filter-sort i,.filter-type-s i,.filter-type-l i,.filter-type-p i,.filter-type-g i,.filter-price-split,.brand-icon,.sBr-prev i,.sBr-next i,.sGr-prev i,.sGr-next i,.filter-price input,.fAl-custom .fAlc-input{background-image:url(../../../../public/plant/multiselect/search_sprites.gif?v=2.0);background-repeat: no-repeat}
+.new-activity .hot, .h-comment i, .store-yl, .store-type i ,.crumb-delete,.crumb-search-btn,.attr-item i,.attr-cate .attr-hd,.attr-bar .attr-choose i,.more-drop-arrow,.more-expand-arrow,.filter-area,.filter-sort i,.filter-type-s i,.filter-type-l i,.filter-type-p i,.filter-type-g i,.filter-price-split,.brand-icon,.sBr-prev i,.sBr-next i,.sGr-prev i,.sGr-next i,.filter-price input,.fAl-custom .fAlc-input{background-image:url("/img/views/plant_querying/search_sprites.gif?v=2.0");background-repeat: no-repeat}
 .hidden{display: none;}
 .ml-2{ margin-left: 2px; }
 .clr-999{ color: #999; }

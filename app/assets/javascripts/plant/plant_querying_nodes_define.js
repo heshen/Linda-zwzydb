@@ -15,7 +15,7 @@ $(function(){
                         '<img picsize="220"'+
                         'src=""'+
                         'alt=""'+
-                        'onerror="this.src=\'/img/no_img.gif\'"/>'+
+                        'onerror="this.src=\'/img/views/plant_querying/no_img.gif\'"/>'+
                     '</a>'+
                  '</div>'+
                  '<div class="goods-info">'+
