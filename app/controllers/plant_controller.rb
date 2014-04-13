@@ -64,7 +64,6 @@ class PlantController < ApplicationController
 		if @b_found
 			@yingyong_quyu = @zhong[0].engineering.yingyong_quyu.join(",")
 			@gongneng = @zhong[0].gongneng.join(",")
-
 			@guanshang = @zhong[0].guanshang.join(",")
 
 			pic_path = File.join("public","pic-store","img",@pic_dir1,@pic_dir2)
@@ -90,10 +89,8 @@ class PlantController < ApplicationController
 
 				@all_img_arr << tmp_arr
 			end
-
 		end
-
-	end
+  end
 
 end
 
