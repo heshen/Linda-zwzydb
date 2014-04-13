@@ -1,0 +1,88 @@
+
+<script type="text/javascript" src="/subviews/map/jquery-jvectormap-1.2.2.min.js"></script>
+<script type="text/javascript" src="/subviews/map/jquery-jvectormap-cn-merc-cn.js"></script>
+<script type="text/javascript" src="/subviews/map/provinceData.js"></script>
+<!--<script type="text/javascript" src="/subviews/map/jquery-jvectormap-us-aea-en.js"></script>-->
+<link href="/subviews/map/jquery-jvectormap-1.2.2.css" rel="stylesheet" media="screen">
+
+<script>
+    $('#map').vectorMap({
+        map: 'cn_merc_en',
+//        map: 'us_aea_en',
+        backgroundColor: 'transparent',
+        zoomMin: 0.9,
+        zoomMax: 1.9,
+//        regionsSelectable: true,
+//        markersSelectable: true,
+        focusOn: {
+            x: 0.55,
+            y: 2,
+            //scale: 1.6
+            scale: 0.9
+        },
+        regionStyle: {
+            initial: {
+                fill: '#e5e5e5',
+                "fill-opacity": 1,
+                stroke: 'none',
+                "stroke-width": 0,
+                "stroke-opacity": 1
+            },
+            hover: {
+                fill: '#fff',
+                "fill-opacity": 0.8
+            },
+            selected: {
+                fill: 'yellow'
+            },
+            selectedHover: {}
+        },
+      /*  series: {
+         regions: [{
+         values: tourData,
+         scale: ['#C8EEFF', '#0071A4'],
+         normalizeFunction: 'polynomial'
+         }]
+         }, */
+        series :{
+            regions: [{
+                values: provinceData,
+                scale: {
+                    '1': '#CFC29D',
+                    '2': '#FC8D62',
+                    '3': '#8DA0CB',
+                    '4': '#E78AC3',
+                    '5': '#A8D753',
+                    '6': '#65C2A5',
+                    '7': '#9C80B8'
+                },
+               attribute: 'fill'
+            }]
+        },
+//         onRegionLabelShow: function(e, el, code) {
+//         el.html(el.html() + ' (最后到达 - ' + tourData[code] + ')');
+//         },
+        onRegionClick: function(e, code){
+            alert(code);
+        },
+        markerStyle: {
+            initial: {
+                fill: '#fd8888',
+                stroke: '#fff'
+            },
+            hover: {
+                fill: '#fd3838',
+                stroke: '#fff',
+                "fill-opacity": 0.8
+            }
+        }//,
+//        markers: [
+//            {latLng: [34.62, 112.45], name: '河南 - 洛阳  家'},
+//            {latLng: [34.74, 113.66], name: '河南 - 郑州  2010,2011,2012'},
+//            {latLng: [39.95, 116.34], name: '北京  2013'},
+//            {latLng: [38.97, 121.53], name: '辽宁 - 大连  2010-2013'},
+//            {latLng: [25.74, 123.47], name: '钓鱼岛是中国的固有领土！'}
+//        ]
+    });
+</script>
+<!--<div class="jvectormap-label" style="display: none; left: 422px; top: 77px;">黑龙江</div>-->

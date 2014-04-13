@@ -21,12 +21,12 @@
               <div class="col-md-5 plant-toppart-a">
 
                 <a href="#" class="thumbnail" title=<%= @q_cname%>>
-                  <img src= <%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"1.jpg" %>  alt=<%= @q_cname%>/>
+                  <img src= <%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"1.jpg" %>  alt=<%= @q_cname%>/>
                 </a>
 
                 <% if @img_count > 1 %>
                 <a href="#" class="thumbnail"  title=<%= @q_cname%>>
-                  <img src=<%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"2.jpg" %> alt=<%= @q_cname%>>
+                  <img src=<%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"2.jpg" %> alt=<%= @q_cname%>>
                 </a>
 	            <% end %>
 
@@ -95,7 +95,7 @@
                 <% nTemp = 3 %>
                 <% while nTemp <= @img_count do %>
                 <a href="#" class="thumbnail"  title=<%= @q_cname%>>
-                  <img src=<%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
+                  <img src=<%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
                 </a>
 	            <% nTemp = nTemp + 2 %>
 	            <% end %>
@@ -105,7 +105,7 @@
                 <% nTemp = 4 %>
                 <% while nTemp <= @img_count do %>
                     <a href="#" class="thumbnail"  title=<%= @q_cname%>>
-                      <img src=<%= '/plant/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
+                      <img src=<%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
                     </a>
                     <% nTemp = nTemp + 2 %>
                 <% end %>

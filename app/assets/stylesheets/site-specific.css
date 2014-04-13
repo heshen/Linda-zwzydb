@@ -2,13 +2,6 @@
 /*
  *王俊峰的css
  */
-.experts-info {
-  width: 690px;
-  height: 610px;
-  margin: 5px 0 0 -15px;
-  border: none;
-  border-radius: 6px; }
-
 #id_login {
   margin-top: 30px;
   font-size: 12px; }
@@ -70,7 +63,7 @@
   line-height: 18pt; }
 
 article .bkimg {
-  background-image: image-url("background.jpg");
+  background-image: url("/img/layouts/plant/background.jpg");
   background-size: contain; }
 
 .shadow {
@@ -104,7 +97,7 @@ article .bkimg {
 
 article header {
   height: 300px;
-  background: #e5e5e5 image-url("bg1.png");
+  background: #e5e5e5 url("/img/layouts/plant/header-bg.png");
   background-size: contain; }
 
 article {
@@ -113,7 +106,7 @@ article {
 .banner {
   position: relative;
   margin-top: 50px;
-  background: image-url("bg1.png");
+  background: url("/img/layouts/plant/header-bg.png");
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg1.png', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg1.png', sizingMethod='scale')";
@@ -152,7 +145,7 @@ a:active:not(.btn) {
   transition: 500ms; }
 
 body {
-  background: #e5e5e5 image-url("background.jpg");
+  background: #e5e5e5 url("/img/layouts/plant/background.jpg");
   overflow-x: hidden;
   -webkit-user-select: text; }
 
