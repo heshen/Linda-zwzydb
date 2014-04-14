@@ -30,5 +30,8 @@ module LindaZwzydb
 	  config.mongoid.logger = Logger.new($stdout, :warn)
 	  #config.mongoid.persist_in_safe_mode = true
 	  config.mongoid.preload_models = false
+
+	  config.assets.paths << Rails.root.join("vendor/assets/fonts").to_s
+
   end
 end
