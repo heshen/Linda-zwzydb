@@ -4,7 +4,8 @@
     <div class="row" xmlns="http://www.w3.org/1999/html">
       <div class="col-md-11 col-md-offset-1">
         <div class="col-md-4" style="margin-top: 60px">
-          <img class="img-responsive" src="/img/views/plant_index/logo.png" style="max-width: 90%;">
+          <img class="img-responsive" src= <%= image_path("views/plant_index/logo.png") %>  style="max-width: 90%;">
+          <!--<img class="img-responsive" src="/img/views/plant_index/logo.png" style="max-width: 90%;">-->
         </div>
         <div class="col-md-7 " style="margin-top: 60px">
           <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
@@ -20,22 +21,21 @@
             <div class="carousel-inner">
               <div class="item active">
                 <a href="http://www.baidu.com">
-                  <img src="/img/views/plant_index/slide4-zhiwu.jpg" alt="园林植物" class="img-responsive">
+                  <img src= <%= image_path("views/plant_index/slide4-zhiwu.jpg")%> alt="园林植物" class="img-responsive">
                 </a>
                 <div class="carousel-caption"></div>
               </div>
               <div class="item">
-                <img src="/img/views/plant_index/slide2-jingguan.jpg" alt="植物景观"
+                <img src=<%= image_path("views/plant_index/slide2-jingguan.jpg") %>  alt="植物景观"
                      class="img-responsive">
                 <div class="carousel-caption"></div>
               </div>
               <div class="item">
-                <img src="/img/views/plant_index/slide3-yanghu.jpg" alt="设计施工养护"
-                     class="img-responsive">
+                <img class="img-responsive" alt="设计施工养护" src=<%= image_path("views/plant_index/slide3-yanghu.jpg") %> >
                 <div class="carousel-caption"></div>
               </div>
               <div class="item">
-                <img src="/img/views/plant_index/slide1-baike.jpg" alt="百科全书"
+                <img src=<%= image_path("views/plant_index/slide1-baike.jpg") %>  alt="百科全书"
                      class="img-responsive">
                 <div class="carousel-caption"></div>
               </div>
@@ -114,12 +114,11 @@
                 <div class="col-md-3">
                     <div id="id_contact">
                         <!--Contact Info Section-->
-                        <a href="#"><img src="/img/views/plant_index/btn_zixun.gif" class="zixun"/></a>
-                        <a href="#"><img src="/img/views/plant_index/btn_phone.gif"class="phone"/></a>
+                        <a href="#"><img class="zixun" src=<%= image_path("views/plant_index/btn_zixun.gif") %> /></a>
+                        <a href="#"><img class="phone" src=<%= image_path("views/plant_index/btn_phone.gif") %> /></a>
                         <p class="firstline">单位：东北林业大学</p>
                         <p>电话：15846075538</p>
-                        <p>QQ: 403417524 <a href="#"> <img src="/img/views/plant_index/btn_qq.gif"
-                                                           class="qq_img" /></a> </p>
+                        <p>QQ: 403417524 <a href="#"> <img class="qq_img" src=<%= image_path("views/plant_index/btn_qq.gif") %> /></a> </p>
                         <p>邮箱：gz13274763211@126.com</p>
                         <p>邮编：150040</p>
                     </div>
@@ -134,14 +133,14 @@
                                 <div class="input-group inputEmail">
                                     <input type="email" class="form-control input-sm" id="id_InputEmail"
                                            placeholder="Enter email">
-                                             <span class="input-group-addon"><img class="grp_btn" src="/img/views/plant_index/btn_user.png"/>
+                                             <span class="input-group-addon"><img class="grp_btn" src=<%= image_path("views/plant_index/btn_user.png") %>/>
                                              </span>
                                 </div>
                                 <div class="input-group inputPassword">
                                     <input type="password" class="form-control input-sm" id="id_InputPassword"
                                            placeholder="Password">
                                             <span class="input-group-addon"><img class="grp_btn"
-                                                                                 src="/img/views/plant_index/btn_lock.png"/>
+                                                                                 src=<%= image_path("views/plant_index/btn_lock.png") %> />
                                             </span>
                                 </div>
                                 <div class="checkbox">

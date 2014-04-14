@@ -2,10 +2,10 @@
 
 <% #Export localized css/js for this view to the Layout  %>
 <% content_for :style_links do %>
-    <%= stylesheet_link_tag "plant/plant_querying.css", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "plant/plant", media: "all", "data-turbolinks-track" => true %>
 <% end %>
 <% content_for :script_links do %>
-    <%= javascript_include_tag "plant/plant_querying.js", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "plant/plant", "data-turbolinks-track" => true %>
 <% end %>
 
 

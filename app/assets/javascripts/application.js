@@ -15,4 +15,4 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_self
-//= require plant/plant
+// require plant/plant

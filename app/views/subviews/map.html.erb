@@ -1,9 +1,9 @@
 
-<script type="text/javascript" src="/subviews/map/jquery-jvectormap-1.2.2.min.js"></script>
-<script type="text/javascript" src="/subviews/map/jquery-jvectormap-cn-merc-cn.js"></script>
-<script type="text/javascript" src="/subviews/map/provinceData.js"></script>
-<!--<script type="text/javascript" src="/subviews/map/jquery-jvectormap-us-aea-en.js"></script>-->
-<link href="/subviews/map/jquery-jvectormap-1.2.2.css" rel="stylesheet" media="screen">
+<%= javascript_include_tag "map/jquery-jvectormap-1.2.2.min.js"%>
+<%= javascript_include_tag "map/jquery-jvectormap-cn-merc-cn.js"%>
+<%= javascript_include_tag "map/provinceData.js"%>
+<%# javascript_include_tag "map/jquery-jvectormap-us-aea-en.js"%>
+<%= stylesheet_link_tag "map/jquery-jvectormap-1.2.2.css" %>
 
 <script>
     $('#map').vectorMap({
