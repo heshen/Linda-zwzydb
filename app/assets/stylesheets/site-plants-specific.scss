@@ -340,7 +340,7 @@ dt {
   height: 100%;
   width: 569px;
   margin-left: 0px;
-  background: url("/subviews/map/img/map-bg.jpg");
+  background: image-url("subviews/map/img/map-bg.jpg");
   background-size: cover;
 
   @include put-left-corners;

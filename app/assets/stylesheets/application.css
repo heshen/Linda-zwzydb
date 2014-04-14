@@ -12,5 +12,5 @@
  *= require site-specific
  *= require site-plants-specific
  *= require_self
- *= require plant/plant
+ * require plant/plant
  */

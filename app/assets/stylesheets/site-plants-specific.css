@@ -215,7 +215,7 @@ dt {
   height: 100%;
   width: 569px;
   margin-left: 0px;
-  background: url("/subviews/map/img/map-bg.jpg");
+  background: image-url("subviews/map/img/map-bg.jpg");
   background-size: cover;
   -webkit-border-top-left-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;

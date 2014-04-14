@@ -49,9 +49,10 @@
   p {
     font-size: 12px;
     font-weight: bold;
+    margin-top: 10px;
   }
   p.firstline {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   p img.qq_img {
     height: 25px;
@@ -82,7 +83,7 @@
    line-height: 18pt;
 }
  article .bkimg {
-  background-image: url("/img/layouts/plant/background.jpg");
+  background-image: image-url("layouts/plant/background.jpg");
   background-size: contain;
 }
 .shadow {
@@ -135,7 +136,8 @@
 
 article header {
   height: 300px;
-  background:  #e5e5e5  url("/img/layouts/plant/header-bg.png");
+  //background:  #e5e5e5  url("/img/layouts/plant/header-bg.png");
+  background:  #e5e5e5  image-url("layouts/plant/header-bg.png");
   background-size: contain;
 }
 
@@ -147,7 +149,8 @@ article {
 .banner {
   position: relative;
   margin-top: 50px;
-  background: url("/img/layouts/plant/header-bg.png");
+  //background: url("/img/layouts/plant/header-bg.png");
+  background: image-url("layouts/plant/header-bg.png");
   background-size: cover;
 //  background-size: contain;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg1.png', sizingMethod='scale');
@@ -201,7 +204,7 @@ a:active:not(.btn) {
 }
 
 body {
-  background:  #e5e5e5 url("/img/layouts/plant/background.jpg");
+  background:  #e5e5e5 image-url("layouts/plant/background.jpg");
 //  background-size: contain;
   overflow-x: hidden;
   -webkit-user-select: text;
