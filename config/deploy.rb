@@ -1,4 +1,7 @@
 
+config=YAML.load_file('config/secrets.yml')
+set :repo_pwd, config["repo_pwd"]
+
 # Ensure that bundle is used for rake tasks
 SSHKit.config.command_map[:rake] = "bundle exec rake"
 
@@ -6,9 +9,11 @@ SSHKit.config.command_map[:rake] = "bundle exec rake"
 lock '3.2.0'
 
 set :application, 'Linda-zwzydb'
-set :repo_url, 'https://github.com/hitfishking/Linda-zwzydb.git'
+#set :repo_url, "https://hitfishking:#{fetch(:repo_pwd)}@github.com/hitfishking/Linda-zwzydb.git"
+set :repo_url, 'git@github.com:hitfishking/Linda-zwzydb.git'
 set :branch, "master"
 set :deploy_via, :remote_cache
+set :bundle_flags, '--quiet'   # '--deployment --quiet' is the default
 
 #set :repository, 'https://github.com/hitfishking/Linda-zwzydb.git'
 
@@ -16,9 +21,10 @@ set :deploy_via, :remote_cache
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/opt/nginx/html/rails_apps/Linda_zwzydb'
+set :deploy_to, "/opt/nginx/html/rails_apps/#{fetch(:application)}"
 
 # Default value for :scm is :git
+#
 set :scm, :git
 set :scm_passphrase, "yasun000"
 set :user, "hitfishking"

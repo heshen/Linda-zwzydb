@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Linda-zwzydb.iml" afterPath="$PROJECT_DIR$/.idea/Linda-zwzydb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/mongoid.yml" afterPath="$PROJECT_DIR$/config/mongoid.yml" />
+      <change type="DELETED" beforePath="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\config\database.yml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy/production.rb" afterPath="$PROJECT_DIR$/config/deploy/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="c7fcad91-294f-4cb3-9fc3-e8c94becd977" name="Failed commit: Default" comment="4月5日，plant_show开发界面部分。" />
     <ignored path="Linda-zwzydb.iws" />
@@ -31,7 +32,7 @@
     <file path="/usehelp.htm" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1391741158364" ignored="false" />
     <file path="$PROJECT_DIR$/../rubyHomeWork/homework-ABCD-DCBA.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1394355900486" ignored="false" />
     <file path="/homework-ABCD-DCBA.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1394355900486" ignored="false" />
-    <file path="/Ruby Console" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397871997961" ignored="false" />
+    <file path="/Ruby Console" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397921744811" ignored="false" />
     <file path="/Dummy.txt" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397871164789" ignored="false" />
     <file path="/user_test.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395541341666" ignored="false" />
     <file path="/user.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395541904626" ignored="false" />
@@ -45,7 +46,6 @@
     <file path="/shengtai.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1396709683657" ignored="false" />
     <file path="$PROJECT_DIR$/../shovell2/app/controllers/story_controller.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395710637862" ignored="false" />
     <file path="$PROJECT_DIR$/../shovell2/app/helpers/story_helper.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395716281652" ignored="false" />
-    <file path="$PROJECT_DIR$/log/development.log" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395837541797" ignored="false" />
     <file path="/routes.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397314495925" ignored="false" />
     <file path="/index.html.erb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397457475553" ignored="false" />
     <file path="/plant_controller.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1396852225359" ignored="false" />
@@ -75,7 +75,7 @@
     <file path="/plant_show.js" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1396715642325" ignored="false" />
     <file path="/zhong_name_en_cn.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1396780376572" ignored="false" />
     <file path="/mongoid.yml" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1396871730138" ignored="false" />
-    <file path="/production.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397878555578" ignored="false" />
+    <file path="/production.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397914627412" ignored="false" />
     <file path="/application.html.erb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397032298075" ignored="false" />
     <file path="/application.css" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397095102730" ignored="false" />
     <file path="/plant.html.erb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397397371332" ignored="false" />
@@ -99,8 +99,9 @@
     <file path="/plant_querying_nodes_define.js.erb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397462846548" ignored="false" />
     <file path="/map.html.erb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397469278802" ignored="false" />
     <file path="/plant.js.coffee" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397470113923" ignored="false" />
-    <file path="/deploy.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397878104704" ignored="false" />
+    <file path="/deploy.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397921804230" ignored="false" />
     <file path="/staging.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397876739367" ignored="false" />
+    <file path="/secrets.yml" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397913325510" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,19 +130,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <file leaf-file-name="Capfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Capfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="59" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+            <state line="21" column="48" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Capfile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Capfile">
+      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="48" selection-start="606" selection-end="606" vertical-scroll-proportion="0.82417583">
+            <state line="23" column="11" selection-start="776" selection-end="776" vertical-scroll-proportion="0.5063291">
               <folding />
             </state>
           </provider>
@@ -150,7 +151,16 @@
       <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="18" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.0">
+            <state line="63" column="17" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="secrets.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/secrets.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -197,8 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/subviews/experts.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/site-plants-specific.scss" />
         <option value="$PROJECT_DIR$/app/views/subviews/map.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/plant/plant.js.coffee" />
@@ -209,10 +217,12 @@
         <option value="$PROJECT_DIR$/app/views/plant/plant_querying.html.erb" />
         <option value="$PROJECT_DIR$/config/mongoid.yml" />
         <option value="$PROJECT_DIR$/config/deploy/staging.rb" />
-        <option value="$PROJECT_DIR$/config/deploy.rb" />
-        <option value="$PROJECT_DIR$/config/deploy/production.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/Capfile" />
+        <option value="$PROJECT_DIR$/config/secrets.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config/deploy/production.rb" />
+        <option value="$PROJECT_DIR$/config/deploy.rb" />
       </list>
     </option>
   </component>
@@ -307,6 +317,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linda-zwzydb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linda-zwzydb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
@@ -360,76 +384,7 @@
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\assets\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: Linda-zwzydb">
-    <configuration default="false" name="assets:precompile" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
-      <module name="Linda-zwzydb" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="production" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="assets:precompile" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="assets:clobber" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
-      <module name="Linda-zwzydb" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="production" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="assets:clobber" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyDebugRunner" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="IRB console" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
-      <module name="Linda-zwzydb" />
-      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="C:/Ruby193/bin/irb" />
-      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--prompt simple" />
-      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="IRB console.IRB console">
     <configuration default="false" name="doc:app" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="Linda-zwzydb" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -452,6 +407,44 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="deploy:check" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
+      <module name="Linda-zwzydb" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_NAME" VALUE="deploy:check" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_ARGS" VALUE="" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_STAGE" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="deploy" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
+      <module name="Linda-zwzydb" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_NAME" VALUE="deploy" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_ARGS" VALUE="" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_STAGE" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="Rails console: Linda-zwzydb" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="Linda-zwzydb" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -467,6 +460,25 @@
       <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/bin/rails" />
       <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="IRB console" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="Linda-zwzydb" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="C:/Ruby193/bin/irb" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--prompt simple" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -511,6 +523,23 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CapistranoRunConfigurationType" factoryName="Capistrano">
+      <module name="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="WORK DIR" VALUE="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CAPISTRANO_RUN_CONFIGURATION NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_NAME" VALUE="" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_TASK_ARGS" VALUE="" />
+      <CAPISTRANO_RUN_CONFIG_SETTINGS_ID NAME="CAPISTRANO_STAGE" VALUE="" />
       <method />
     </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -714,19 +743,19 @@
       <item index="1" class="java.lang.String" itemvalue="Rails.Development: Linda-zwzydb" />
       <item index="2" class="java.lang.String" itemvalue="Rake.test" />
       <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.assets:precompile" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.assets:clobber" />
-      <item index="6" class="java.lang.String" itemvalue="IRB console.IRB console" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.doc:app" />
-      <item index="8" class="java.lang.String" itemvalue="IRB console.Rails console: Linda-zwzydb" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.doc:app" />
+      <item index="5" class="java.lang.String" itemvalue="Capistrano.deploy:check" />
+      <item index="6" class="java.lang.String" itemvalue="Capistrano.deploy" />
+      <item index="7" class="java.lang.String" itemvalue="IRB console.Rails console: Linda-zwzydb" />
+      <item index="8" class="java.lang.String" itemvalue="IRB console.IRB console" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: Linda-zwzydb" />
+        <item index="0" class="java.lang.String" itemvalue="IRB console.IRB console" />
         <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: Linda-zwzydb" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.doc:app" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.assets:precompile" />
-        <item index="4" class="java.lang.String" itemvalue="Rake.assets:clobber" />
+        <item index="2" class="java.lang.String" itemvalue="Capistrano.deploy" />
+        <item index="3" class="java.lang.String" itemvalue="Capistrano.deploy:check" />
+        <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: Linda-zwzydb" />
       </list>
     </recent_temporary>
   </component>
@@ -904,17 +933,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19935691" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44533762" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.76121795" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3037879" sideWeight="0.62861735" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22575757" sideWeight="0.551447" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5448718" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15273312" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37138262" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5176849" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44855306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4726688" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1006,21 +1035,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="63" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.057591625" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.rdoc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="201" selection-end="201" vertical-scroll-proportion="0.19720767" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/subviews/map.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="47" selection-start="347" selection-end="347" vertical-scroll-proportion="0.036764707" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/plant/plant.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="10" selection-start="155" selection-end="155" vertical-scroll-proportion="0.067226894" />
@@ -1071,13 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="18" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="27" selection-start="2045" selection-end="2049" vertical-scroll-proportion="0.0">
@@ -1092,16 +1099,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+    <entry file="file://$PROJECT_DIR$/config/secrets.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="59" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="170" selection-end="170" vertical-scroll-proportion="-0.048387095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="27" selection-start="485" selection-end="485" vertical-scroll-proportion="0.6451613">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Capfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="48" selection-start="606" selection-end="606" vertical-scroll-proportion="0.82417583">
+        <state line="21" column="48" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="17" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="11" selection-start="776" selection-end="776" vertical-scroll-proportion="0.5063291">
           <folding />
         </state>
       </provider>

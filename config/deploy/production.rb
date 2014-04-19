@@ -26,8 +26,7 @@ role :db,  %w{hitfishking@115.28.43.56}
 # For a simple environment like we have, our app, web, and db are all on a single server
 server "115.28.43.56", user: 'hitfishking', roles: %w{app web db}
 
-
-set :ssh_options, { keys: ["#{ENV['USERPROFILE']}/id_rsa"] }
+#set :ssh_options, { keys: ["#{ENV['USERPROFILE']}/id_rsa"] }
 
 
 # Custom SSH Options
@@ -56,13 +55,14 @@ set :ssh_options, { keys: ["#{ENV['USERPROFILE']}/id_rsa"] }
 #     # password: 'please use keys'
 #   }
 
-server 'linda.zhimar.com',
+server '115.28.43.56',
    user: 'hitfishking',
    roles: %w{web app db},
    ssh_options: {
      user: 'hitfishking', # overrides user setting above
-     keys: ["#{ENV['USERPROFILE']}/id_rsa"],
-     forward_agent: false,
-     auth_methods: %w(publickey password)
+     #keys: ["#{ENV['USERPROFILE']}/id_rsa"],
+     keys: ["f:\\aaa\\id_rsa"],
+     forward_agent: true,
+     auth_methods: %w(publickey)
      #password: 'please use keys'
    }
