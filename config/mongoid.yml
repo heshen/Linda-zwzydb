@@ -10,6 +10,7 @@ development:
       # of host:port pairs. (required)
       hosts:
         - 192.168.1.110:27017
+#        - 115.28.43.56:27017
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
