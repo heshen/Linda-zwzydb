@@ -56,9 +56,6 @@ GEM
     capistrano-rails (1.1.1)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capistrano-rvm (0.1.1)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -68,6 +65,7 @@ GEM
     coffee-script-source (1.6.3)
     daemons (1.1.9)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.0.2)
     hike (1.2.3)
@@ -120,6 +118,9 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rvm1-capistrano3 (1.2.2)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -163,6 +164,7 @@ GEM
       json (>= 1.8.0)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
@@ -171,7 +173,6 @@ DEPENDENCIES
   capistrano (~> 3.2.0)
   capistrano-bundler (~> 1.1)
   capistrano-rails (~> 1.1)
-  capistrano-rvm
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
@@ -181,6 +182,7 @@ DEPENDENCIES
   mysql2
   rails (= 4.0.1)
   rake
+  rvm1-capistrano3
   sass-rails (~> 4.0.0)
   sdoc
   thin

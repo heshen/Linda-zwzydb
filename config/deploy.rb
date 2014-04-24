@@ -33,6 +33,8 @@ set :user, "hitfishking"
 #We are only going to use a single stage: production
 set :stages, ["production"]
 
+set :default_env, { rvm_bin_path: '~/.rvm/bin' }
+
 
 # Default value for :format is :pretty
 # set :format, :pretty
