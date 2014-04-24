@@ -14,7 +14,8 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails
 #
-require 'capistrano/rvm'
+#require 'capistrano/rvm'
+require 'rvm1/capistrano3'
 
 # We're going to use the full capistrano/rails since
 # it includes the asset compilation, DB migrations

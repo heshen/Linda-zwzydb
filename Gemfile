@@ -67,7 +67,9 @@ gem 'rake'
 
 # Use Capistrano for deployment
 gem 'capistrano', '~> 3.2.0', require: false, group: :development
-gem 'capistrano-rvm'
+#gem 'capistrano-rvm'
+#gem 'rvm-capistrano'
+gem 'rvm1-capistrano3', require: false
 
 group :development do
 	gem 'capistrano-rails',   '~> 1.1', require: false
