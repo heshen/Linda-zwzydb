@@ -18,4 +18,6 @@
 /config/mongoid.yml
 /config/secrets.yml
 /public/pic-store
+/public/assets
+
 
