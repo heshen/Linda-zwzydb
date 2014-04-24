@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capfile" afterPath="$PROJECT_DIR$/Capfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Linda-zwzydb.iml" afterPath="$PROJECT_DIR$/.idea/Linda-zwzydb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/mongoid.yml" afterPath="$PROJECT_DIR$/config/mongoid.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="c7fcad91-294f-4cb3-9fc3-e8c94becd977" name="Failed commit: Default" comment="4月5日，plant_show开发界面部分。" />
@@ -59,7 +50,7 @@
       <file leaf-file-name="Capfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Capfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="39" selection-start="433" selection-end="433" vertical-scroll-proportion="0.5427632" vertical-offset="45" max-vertical-offset="570">
+            <state line="8" column="36" selection-start="220" selection-end="220" vertical-scroll-proportion="0.24671052" vertical-offset="45" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
@@ -96,7 +87,9 @@
         <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="30" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
-              <folding />
+              <folding>
+                <marker date="1398265823249" expanded="true" signature="402:468" placeholder="hosts:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -311,7 +304,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
@@ -909,7 +902,11 @@
       <created>1397484605200</created>
       <updated>1397484605200</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="4.24 rvm-问题试验">
+      <created>1398303773782</created>
+      <updated>1398303773783</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -934,7 +931,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1282" height="753" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35596028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19935691" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -946,7 +943,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5448718" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5176849" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44850498" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44850498" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4726688" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1007,7 +1004,8 @@
     <MESSAGE value="4月12日，prouction模式下，CSS中image问题的解决；开始启动subview问题。" />
     <MESSAGE value="4月13日，2个subview基本完成。" />
     <MESSAGE value="4月14日，前台views/assets整理进一步完善，基本完成；/public目录下基本清理空了。" />
-    <option name="LAST_COMMIT_MESSAGE" value="4月14日，前台views/assets整理进一步完善，基本完成；/public目录下基本清理空了。" />
+    <MESSAGE value="4.24 rvm-问题试验" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.24 rvm-问题试验" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1063,7 +1061,9 @@
     <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="30" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
-          <folding />
+          <folding>
+            <marker date="1398265823249" expanded="true" signature="402:468" placeholder="hosts:" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1097,7 +1097,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Capfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="433" selection-end="433" vertical-scroll-proportion="0.5427632" vertical-offset="45" max-vertical-offset="570">
+        <state line="8" column="36" selection-start="220" selection-end="220" vertical-scroll-proportion="0.24671052" vertical-offset="45" max-vertical-offset="570">
           <folding />
         </state>
       </provider>
