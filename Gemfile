@@ -48,36 +48,16 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+	gem 'capistrano','2.14.2'
+end
+gem 'rvm-capistrano'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-
-
-###############################################################
-# NOTE: This is not a complete Gemfile. This only includes the
-#       necessary tweaks for a Capistrano 3 and Phusion
-#       Passenger deployment setup with rvm
-###############################################################
-
-# Be sure to include rake in your Gemfile
-gem 'rake'
-
-# Use Capistrano for deployment
-gem 'capistrano', '~> 3.2.0', require: false, group: :development
-gem 'capistrano-rvm'
-
-group :development do
-	gem 'capistrano-rails',   '~> 1.1', require: false
-	gem 'capistrano-bundler', '~> 1.1', require: false
-end
-
-
-# Use Capistrano for deployment
-#gem 'capistrano', group: :development
-#gem 'capistrano', '~> 3.2.0' , group: :development
-
 # Use debugger
 # gem 'debugger', group: [:development, :test]
