@@ -45,6 +45,8 @@ namespace :deploy do
 	desc "Symlink shared config files"
 	task :symlink_config_files do
 		run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+		run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/mongoid.yml #{ current_path }/config/mongoid.yml"
+		run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/secrets.yml #{ current_path }/config/secrets.yml"
 	end
 
 
