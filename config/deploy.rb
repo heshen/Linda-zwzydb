@@ -1,79 +1,59 @@
+# adjust if you are using RVM, remove if you are not
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require "rvm/capistrano"
+set :rvm_ruby_string, '1.9.3'
+set :rvm_type, :user
 
-config=YAML.load_file('config/secrets.yml')
-set :repo_pwd, config["repo_pwd"]
-
-# Ensure that bundle is used for rake tasks
-SSHKit.config.command_map[:rake] = "bundle exec rake"
-
-# config valid only for Capistrano 3.1
-lock '3.2.0'
-
-set :application, 'Linda-zwzydb'
-#set :repo_url, "https://hitfishking:#{fetch(:repo_pwd)}@github.com/hitfishking/Linda-zwzydb.git"
-set :repo_url, 'git@github.com:hitfishking/Linda-zwzydb.git'
-set :branch, "master"
-set :deploy_via, :remote_cache
-set :bundle_flags, '--quiet'   # '--deployment --quiet' is the default
-
-#set :repository, 'https://github.com/hitfishking/Linda-zwzydb.git'
-
-# Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
-
-# Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/opt/nginx/html/rails_apps/#{fetch(:application)}"
-
-# Default value for :scm is :git
-#
+set :application, "Linda-zwzydb"
+set :repository,  "git@github.com:hitfishking/Linda-zwzydb.git"
+set :deploy_to, "/opt/nginx/html/rails_apps/Linda-zwzydb"
 set :scm, :git
-set :scm_passphrase, "yasun000"
+set :branch, "master"
 set :user, "hitfishking"
+set :use_sudo, false
+set :rails_env, "production"
+set :deploy_via, :copy
+set :ssh_options, { :forward_agent => true, :port => 4321 }
+ssh_options[:user] = "hitfishking"
+ssh_options[:keys] = ["f:/aaa/id_rsa"]    #ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 
-
-#We are only going to use a single stage: production
-set :stages, ["production"]
-
-
-# Default value for :format is :pretty
-# set :format, :pretty
-
-# Default value for :log_level is :debug
-# set :log_level, :debug
-
-# Default value for :pty is false
-# set :pty, true
-
-# Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
-
-# Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for keep_releases is 5
 set :keep_releases, 5
+default_run_options[:pty] = true
 
+server "115.28.43.56", :app, :web, :db, :primary => true
+
+# set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
+# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+
+#role :web, "your web-server here"                          # Your HTTP server, Apache/etc
+#role :app, "your app-server here"                          # This may be the same as your `Web` server
+#role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
+#role :db,  "your slave db-server here"
+
+# if you want to clean up old releases on each deploy uncomment this:
+# after "deploy:restart", "deploy:cleanup"
+after "deploy", "deploy:symlink_config_files"
+after "deploy", "deploy:restart"
+after "deploy", "deploy:cleanup"
+
+# if you're still using the script/reaper helper you will need
+# these http://github.com/rails/irs_process_scripts
+
+# If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
+	desc "Symlink shared config files"
+	task :symlink_config_files do
+		run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+	end
 
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
 
-  after :publishing, :restart
+	desc "Human readable description of task"
+	task :start do ; end
+	task :stop do ; end
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
+	desc "Restart Passenger app"
+	task :restart, :roles => :app, :except => { :no_release => true } do
+		run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+	end
 
 end
