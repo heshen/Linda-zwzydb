@@ -83,5 +83,6 @@ production:
     default:
       database: linda_zwzydb_development
       hosts:
-        - 192.168.1.110:27017
+#        - 192.168.1.110:27017
+        - 115.28.43.56:27017
 
