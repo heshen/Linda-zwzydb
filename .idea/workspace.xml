@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" name="Default" comment="" />
     <list id="c7fcad91-294f-4cb3-9fc3-e8c94becd977" name="Failed commit: Default" comment="4月5日，plant_show开发界面部分。">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Linda-zwzydb.iml" afterPath="$PROJECT_DIR$/.idea/Linda-zwzydb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Linda-zwzydb.iws" />
@@ -31,7 +29,7 @@
     <file path="$PROJECT_DIR$/../rubyHomeWork/homework-ABCD-DCBA.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1394355900486" ignored="false" />
     <file path="/homework-ABCD-DCBA.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1394355900486" ignored="false" />
     <file path="/Ruby Console" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398215943444" ignored="false" />
-    <file path="/Dummy.txt" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398308287608" ignored="false" />
+    <file path="/Dummy.txt" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398398009198" ignored="false" />
     <file path="/user_test.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395541341666" ignored="false" />
     <file path="/user.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395541904626" ignored="false" />
     <file path="/ontology.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1395648807640" ignored="false" />
@@ -102,6 +100,9 @@
     <file path="/secrets.yml" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1397913325510" ignored="false" />
     <file path="$PROJECT_DIR$/../DeployTestProj01/config/deploy.rb" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398216744642" ignored="false" />
     <file path="$PROJECT_DIR$/../DeployTestProj01/Gemfile" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398306405476" ignored="false" />
+    <file path="/.gitignore" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398397515151" ignored="false" />
+    <file path="/a123.txt" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398397826115" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398398146731" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,10 +149,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="73" selection-end="73" vertical-scroll-proportion="0.05319149">
+            <state line="15" column="37" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="20" selection-start="556" selection-end="556" vertical-scroll-proportion="0.6722689">
               <folding />
             </state>
           </provider>
@@ -180,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/subviews/map.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/plant/plant.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/plant/plant.js.js" />
@@ -191,11 +200,12 @@
         <option value="$PROJECT_DIR$/config/mongoid.yml" />
         <option value="$PROJECT_DIR$/config/deploy/staging.rb" />
         <option value="$PROJECT_DIR$/config/secrets.yml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/deploy/production.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/Capfile" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/public/a123.txt" />
       </list>
     </option>
   </component>
@@ -272,6 +282,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,6 +311,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linda-zwzydb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linda-zwzydb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -307,22 +332,21 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="102" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="132" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="119" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="119" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="131" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="925" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="131" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="919" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="925" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="126" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="126" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -338,23 +362,23 @@
     <property name="options.lastSelected" value="preferences.externalTools" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\config" />
+      <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\public" />
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\assets\images" />
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\views\subviews" />
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\public\subviews\experts" />
-      <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\public\subviews\assets" />
-      <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\vendor\assets\javascripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\config" />
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\assets\stylesheets\map" />
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\assets\javascripts\map" />
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\assets\images\subviews\experts" />
       <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\assets\images\layouts\plant" />
-      <recent name="E:\ProgData\04.RubyMineProjects\Linda-zwzydb\app\assets\images" />
     </key>
   </component>
   <component name="RunManager" selected="IRB console.Rails console: Linda-zwzydb">
@@ -579,9 +603,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
-      <method />
-    </configuration>
     <configuration default="true" type="IrbRunConfigurationType" factoryName="IRB console">
       <module name="" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -597,6 +618,9 @@
       <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
@@ -905,7 +929,15 @@
       <created>1398308274253</created>
       <updated>1398308274253</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="4.24-3 comment ln mongoid.yml">
+      <created>1398395592608</created>
+      <updated>1398395592608</updated>
+    </task>
+    <task id="LOCAL-00034" summary="4.24-3 comment ln mongoid.yml">
+      <created>1398398002697</created>
+      <updated>1398398002697</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -930,14 +962,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40185675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33118972" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44533762" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.76121795" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26136363" sideWeight="0.6688103" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26818183" sideWeight="0.670418" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5448718" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33118972" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -994,7 +1026,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="4.24-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.24-3 comment ln mongoid.yml" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1026,6 +1058,7 @@
     <MESSAGE value="4月13日，2个subview基本完成。" />
     <MESSAGE value="4月14日，前台views/assets整理进一步完善，基本完成；/public目录下基本清理空了。" />
     <MESSAGE value="4.24-2" />
+    <MESSAGE value="4.24-3 comment ln mongoid.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1087,21 +1120,6 @@
         <state line="75" column="53" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.40394974" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="485" selection-end="485" vertical-scroll-proportion="0.6451613" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="261" selection-end="261" vertical-scroll-proportion="0.33184856" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/secrets.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.03350084" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="12" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0">
@@ -1118,7 +1136,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="73" selection-end="73" vertical-scroll-proportion="0.05319149">
+        <state line="15" column="37" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/a123.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="66" selection-start="168" selection-end="168" vertical-scroll-proportion="0.20168068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="20" selection-start="556" selection-end="556" vertical-scroll-proportion="0.6722689">
           <folding />
         </state>
       </provider>
