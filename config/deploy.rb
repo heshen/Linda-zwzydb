@@ -51,6 +51,7 @@ namespace :deploy do
 		run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
 		#run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/mongoid.yml #{ current_path }/config/mongoid.yml"
 		run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/secrets.yml #{ current_path }/config/secrets.yml"
+		run "#{ try_sudo } ln -s #{ deploy_to }/shared/pic-store #{ current_path }/public/pic-store"
 	end
 
 
