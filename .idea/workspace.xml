@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" name="Default" comment="" />
-    <list id="c7fcad91-294f-4cb3-9fc3-e8c94becd977" name="Failed commit: Default" comment="4月5日，plant_show开发界面部分。">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list id="c7fcad91-294f-4cb3-9fc3-e8c94becd977" name="Failed commit: Default" comment="4月5日，plant_show开发界面部分。" />
     <ignored path="Linda-zwzydb.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1390531281195" ignored="false" />
@@ -102,7 +100,7 @@
     <file path="$PROJECT_DIR$/../DeployTestProj01/Gemfile" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398306405476" ignored="false" />
     <file path="/.gitignore" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398397515151" ignored="false" />
     <file path="/a123.txt" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398397826115" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398398146731" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" time="1398401536975" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -961,7 +959,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40185675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
