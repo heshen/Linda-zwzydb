@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="cc2f236a-a2c7-42ae-8c15-3a05e0797eef" name="Default" comment="" />
     <list id="c7fcad91-294f-4cb3-9fc3-e8c94becd977" name="Failed commit: Default" comment="4月5日，plant_show开发界面部分。" />
     <ignored path="Linda-zwzydb.iws" />
     <ignored path=".idea/workspace.xml" />
