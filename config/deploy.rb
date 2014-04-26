@@ -15,8 +15,8 @@ set :use_sudo, false
 set :rails_env, "production"
 
 set :deploy_via, :copy
-set :copy_cache, true
-set :copy_exclude, %w(.git)
+#set :copy_cache, true
+#set :copy_exclude, %w(.git)
 #set :deploy_via, :remote_cache
 #set :copy_exclude, [ '.git' ]
 
