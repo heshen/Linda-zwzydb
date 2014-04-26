@@ -20,7 +20,9 @@ set :rails_env, "production"
 set :deploy_via, :remote_cache
 set :copy_exclude, [ '.git' ]
 
-set :ssh_options, { :forward_agent => true, :port => 4321 }
+#set :ssh_options, { :forward_agent => true, :port => 4321 }
+#ssh_options[:forward_agent] = true
+ssh_options[:port] = 4321
 ssh_options[:user] = "hitfishking"
 ssh_options[:keys] = ["f:/aaa/id_rsa"]    #ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 
