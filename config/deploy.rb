@@ -27,7 +27,7 @@ ssh_options[:keys] = ["f:/aaa/id_rsa"]    #ssh_options[:keys] = [File.join(ENV["
 set :keep_releases, 5
 default_run_options[:pty] = true
 
-server "115.28.43.56", :app, :web, :db, :primary => true
+server "linda.zhimar.com", :app, :web, :db, :primary => true
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
