@@ -15,7 +15,7 @@ set :use_sudo, false
 set :rails_env, "production"
 
 set :deploy_via, :copy
-set :copy_cache, true
+#set :copy_cache, true
 set :copy_exclude, %w(.git)
 
 set :ssh_options, { :forward_agent => true, :port => 4321 }
