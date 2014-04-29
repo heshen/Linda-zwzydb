@@ -53,6 +53,7 @@ group :development do
 end
 gem 'rvm-capistrano'
 
+gem 'aliyun-oss'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

@@ -1,6 +1,17 @@
 # encoding: utf-8
 class PlantController < ApplicationController
-  def index
+	require 'aliyun/oss'
+	include Aliyun::OSS
+
+	config = YAML.load_file('config/secrets.yml')
+	#Connect to Aliyun::OSS
+	Aliyun::OSS::Base.establish_connection!(
+		  :server => 'oss-cn-qingdao.aliyuncs.com',  #Default value is : oss.aliyuncs.com
+		  :access_key_id     => config["aliyun_oss_access_key_id"],
+		  :secret_access_key => config["aliyun_oss_secret_access_key"]
+	)
+
+	def index
 		@myke = Ke.all
 		@myke_name = Ke.all.entries
   end
@@ -49,49 +60,44 @@ class PlantController < ApplicationController
 
   end
 
-  # 植物详情页
+  # 植物详情页 (新版，从Aliyun::OSS的 /pic-store中读取)
   def plant_show
-		@q_cname = params[:plant_name]
-		@pic_dir1 = params[:picdir1]
-		@pic_dir2 = params[:picdir2]
+		 @pic_dir1 = params[:picdir1]
+		 @q_cname = params[:plant_name]
 
-	  @zhong = Zhong.where("cname" => @q_cname)
-		@ke = Ke.all
+		 @zhong = Zhong.where("cname" => @q_cname)
+		 return 0 if (@zhong.count == 0)
+		 @ke = Ke.all
 
-		@b_found = true
-		@b_found = false if @zhong.count == 0
+		 @yingyong_quyu = @zhong[0].engineering.yingyong_quyu.join(",")
+		 @gongneng = @zhong[0].gongneng.join(",")
+		 @guanshang = @zhong[0].guanshang.join(",")
 
-		if @b_found
-			@yingyong_quyu = @zhong[0].engineering.yingyong_quyu.join(",")
-			@gongneng = @zhong[0].gongneng.join(",")
-			@guanshang = @zhong[0].guanshang.join(",")
+		 oss_store = Bucket.find('pic-store')
+		 @zhong_img_count = oss_store.objects(:max_keys => 300, :prefix => @pic_dir1+'/'+ @q_cname).size - 1
 
-			pic_path = File.join("public","pic-store","img",@pic_dir1,@pic_dir2)
-			@img_count = Dir.entries(pic_path).count - 3
+		 #建立全体图片列表，以供右侧随机显示
+		 oss_store = Bucket.find('pic-store')     #前一步oss_store.objects(...)改变了oss_store的内容！只能重新获取。
+		 all_files_list = oss_store.objects(:max_keys => 300)    #取得最多前300个文件object数组
+		 # TODO: 将来考虑用其他更高效的方式实现随机图片显示功能
+		 @all_pic_path_arr = []
+		 all_files_list.each_index{|x|
+			 if all_files_list[x].key.end_with?(".jpg")
+				 @all_pic_path_arr << all_files_list[x].key
+			 end
+		 }
+		 @all_img_count = @all_pic_path_arr.count
 
-			Dir.chdir("public")    #临时从/Linda-zwzydb根目录，进入到public子目录；用于生成相对于/plant为根目录的图片asset路径；
-			all_pic_dir_pattern = File.join("pic-store","img","**","*.jpg")
-			@all_pic_path_arr = Dir.glob(all_pic_dir_pattern)
-			Dir.chdir("../")       #返回/Linda-zwzydb根目录
+		 @all_img_arr = []    #[[src_path, cn_name],[],...]  Generate in random.
+		 for i in 1..6 do
+			 src_path = @all_pic_path_arr[rand(@all_img_count)]
+			 tmp_arr = [] << src_path
+			 cn_name =  /.*\/(?<name>.*)\/.*$/.match(src_path)[:name]   #src_path includes Zhong name
+			 tmp_arr << cn_name
+			 @all_img_arr << tmp_arr
+		 end
 
-			@all_img_count = @all_pic_path_arr.count
-
-			@all_img_arr = []
-			@name_map = NameMap.all[0]  #种名中英文对照表
-			for i in 1..6 do
-				tmp_arr = []
-				rand_num = rand(@all_img_count)
-				src_path = "/"+@all_pic_path_arr[rand_num]
-				tmp_arr << src_path
-				en_name = /\/.*\/.*\/(?<name>.*)\/.*/.match(src_path)[:name]
-				cn_name = @name_map.names[en_name]
-				tmp_arr << cn_name
-
-				@all_img_arr << tmp_arr
-			end
-		end
-  end
-
+	 end
 end
 
 

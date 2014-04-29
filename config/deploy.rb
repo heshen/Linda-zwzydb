@@ -1,5 +1,6 @@
+config = YAML.load_file('config/secrets.yml')
+
 # adjust if you are using RVM, remove if you are not
-# add a line here...
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
 set :rvm_ruby_string, '1.9.3'
@@ -22,9 +23,9 @@ set :copy_exclude, %w(.git)
 
 #set :ssh_options, { :forward_agent => true, :port => 4321 }
 ssh_options[:forward_agent] = true
-ssh_options[:port] = 4321
-ssh_options[:user] = "hitfishking"
-ssh_options[:keys] = ["f:/aaa/id_rsa"]    #ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
+ssh_options[:port] = config["ssh_port"]
+ssh_options[:user] = config["ssh_user"]
+ssh_options[:keys] = [config["ssh_keys"]]    #ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 
 set :keep_releases, 5
 default_run_options[:pty] = true

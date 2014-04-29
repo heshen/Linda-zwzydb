@@ -21,12 +21,12 @@
               <div class="col-md-5 plant-toppart-a">
 
                 <a href="#" class="thumbnail" title=<%= @q_cname%>>
-                  <img src= <%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"1.jpg" %>  alt=<%= @q_cname%>/>
+                  <img src= <%= 'http://pic-store.oss-cn-qingdao.aliyuncs.com/'+@pic_dir1+'/'+@q_cname+'/'+"1.jpg" %>  alt=<%= @q_cname%>/>
                 </a>
 
-                <% if @img_count > 1 %>
+                <% if @zhong_img_count > 1 %>
                 <a href="#" class="thumbnail"  title=<%= @q_cname%>>
-                  <img src=<%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+"2.jpg" %> alt=<%= @q_cname%>>
+                  <img src=<%= 'http://pic-store.oss-cn-qingdao.aliyuncs.com/'+@pic_dir1+'/'+@q_cname+'/'+"2.jpg" %> alt=<%= @q_cname%>>
                 </a>
 	            <% end %>
 
@@ -93,9 +93,9 @@
             <div id="plant-bottom-pics" class="row">
               <div class="col-md-6">
                 <% nTemp = 3 %>
-                <% while nTemp <= @img_count do %>
+                <% while nTemp <= @zhong_img_count do %>
                 <a href="#" class="thumbnail"  title=<%= @q_cname%>>
-                  <img src=<%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
+                  <img src=<%= 'http://pic-store.oss-cn-qingdao.aliyuncs.com/'+@pic_dir1+'/'+@q_cname+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
                 </a>
 	            <% nTemp = nTemp + 2 %>
 	            <% end %>
@@ -103,9 +103,9 @@
 
               <div class="col-md-6">
                 <% nTemp = 4 %>
-                <% while nTemp <= @img_count do %>
+                <% while nTemp <= @zhong_img_count do %>
                     <a href="#" class="thumbnail"  title=<%= @q_cname%>>
-                      <img src=<%= '/pic-store/img/'+@pic_dir1+'/'+@pic_dir2+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
+                      <img src=<%= 'http://pic-store.oss-cn-qingdao.aliyuncs.com/'+@pic_dir1+'/'+@q_cname+'/'+nTemp.to_s+".jpg" %> alt=<%= @q_cname%>>
                     </a>
                     <% nTemp = nTemp + 2 %>
                 <% end %>
@@ -135,7 +135,8 @@
                     <div class="col-md-6 pics-left-col">
                       <% for i in 0..2 do %>
                       <a href="#" class="thumbnail" title=<%= @all_img_arr[i][1]%>>
-                        <img src=<%= @all_img_arr[i][0] %> alt=<%= @all_img_arr[i][1]  %>>
+                        <img src=<%= 'http://pic-store.oss-cn-qingdao.aliyuncs.com/' + @all_img_arr[i][0] %>
+		                                alt=<%= @all_img_arr[i][1]  %>>
                       </a>
 	                  <% end %>
                     </div>
@@ -143,7 +144,8 @@
                     <div class="col-md-6 pics-right-col">
                       <% for i in 3..5 do %>
                           <a href="#" class="thumbnail" title=<%= @all_img_arr[i][1]%>>
-                            <img src=<%= @all_img_arr[i][0] %> alt=<%= @all_img_arr[i][1]  %>>
+                            <img src=<%=  'http://pic-store.oss-cn-qingdao.aliyuncs.com/' + @all_img_arr[i][0] %>
+		                                 alt=<%= @all_img_arr[i][1]  %>>
                           </a>
                       <% end %>
                     </div>
