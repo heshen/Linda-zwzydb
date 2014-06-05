@@ -67,7 +67,13 @@
 //	        $('#map').vectorMap({
 //		        map: 'us_aea_en'
 //	        });
-	        $('#map').html("<img src= <%= image_path("subviews/map/img/heilongjiang.gif") %> />");
+	        if (code == "CN-23") {
+		        $('#map').html("<table style='width:100%'><tr><td align='middle'><img style='height:95%' " +
+				        "src=<%=image_path("subviews/map/img/heilongjiang.gif") %> /> </td><td></td></tr></table>");
+		        $('#map').click(function(){
+			        location.href = "http://linda.zhimar.com/plant/plant_querying"
+		        });
+	        }
         }//,
 //        markerStyle: {
 //            initial: {
