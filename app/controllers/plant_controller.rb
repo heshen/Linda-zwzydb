@@ -14,6 +14,10 @@ class PlantController < ApplicationController
 	def index
 		@myke = Ke.all
 		@myke_name = Ke.all.entries
+
+		#index.html.erb中备份内容，临时存储于此。
+    #<p>Ke.all[0].name =</p> <%= @myke_name %>
+    #<p>Ke.all[x]= <%= @myke[1].name %></p>
   end
 
   # 查询页面
