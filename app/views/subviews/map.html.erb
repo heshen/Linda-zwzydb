@@ -2,7 +2,7 @@
 <%= javascript_include_tag "map/jquery-jvectormap-1.2.2.min.js"%>
 <%= javascript_include_tag "map/jquery-jvectormap-cn-merc-cn.js"%>
 <%= javascript_include_tag "map/provinceData.js"%>
-<%# javascript_include_tag "map/jquery-jvectormap-us-aea-en.js"%>
+<%= javascript_include_tag "map/jquery-jvectormap-us-aea-en.js"%>
 <%= stylesheet_link_tag "map/jquery-jvectormap-1.2.2.css" %>
 
 <script>
@@ -63,19 +63,23 @@
 //         el.html(el.html() + ' (最后到达 - ' + tourData[code] + ')');
 //         },
         onRegionClick: function(e, code){
-            alert(code);
-        },
-        markerStyle: {
-            initial: {
-                fill: '#fd8888',
-                stroke: '#fff'
-            },
-            hover: {
-                fill: '#fd3838',
-                stroke: '#fff',
-                "fill-opacity": 0.8
-            }
+//            alert(code);
+//	        $('#map').vectorMap({
+//		        map: 'us_aea_en'
+//	        });
+	        $('#map').html("<img src= <%= image_path("subviews/map/img/heilongjiang.gif") %> />");
         }//,
+//        markerStyle: {
+//            initial: {
+//                fill: '#fd8888',
+//                stroke: '#fff'
+//            },
+//            hover: {
+//                fill: '#fd3838',
+//                stroke: '#fff',
+//                "fill-opacity": 0.8
+//            }
+//        }//,
 //        markers: [
 //            {latLng: [34.62, 112.45], name: '河南 - 洛阳  家'},
 //            {latLng: [34.74, 113.66], name: '河南 - 郑州  2010,2011,2012'},
