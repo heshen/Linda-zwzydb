@@ -64,7 +64,7 @@ LindaZwzydb::Application.configure do
   #                            plant/plant_querying.css   plant/plant_querying.js
   #                            plant/plant_show.css       plant/plant_show.js
   #                            )
-  config.assets.precompile += %w( plant/plant.css  plant/plant.js  )
+  config.assets.precompile += %w( plant/plant.css  plant/plant.js )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

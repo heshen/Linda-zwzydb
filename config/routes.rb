@@ -12,7 +12,7 @@ LindaZwzydb::Application.routes.draw do
 
   #目前url可以支持中文了，则可回归简单直接模式
   #match 'plant/plant_show(/:plant_name+:picdir1/:picdir2)',:controller => 'plant', :action => 'plant_show' , via: [:get,:post]
-	match 'plant/plant_show/:picdir1/:plant_name',:controller => 'plant', :action => 'plant_show' , via: [:get,:post]
+  match 'plant/plant_show/:picdir1/:plant_name',:controller => 'plant', :action => 'plant_show' , via: [:get,:post]
 
 	# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
