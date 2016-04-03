@@ -9,8 +9,8 @@ development:
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-#        - 192.168.1.110:27017
-        - 115.28.43.56:27017
+        - 192.168.0.50:27018
+#        - 115.28.43.56:27017
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
@@ -69,7 +69,7 @@ test:
     default:
       database: linda_zwzydb_test
       hosts:
-        - 192.168.1.110:27017
+        - 192.168.0.50:27018
       options:
         consistency: :strong
         # In the test environment we lower the retries and retry interval to
@@ -83,6 +83,6 @@ production:
     default:
       database: linda_zwzydb_development
       hosts:
-#       - 192.168.1.110:27017
-        - 115.28.43.56:27017
+       - 192.168.0.50:27018
+#        - 115.28.43.56:27017
 
